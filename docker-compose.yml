@@ -1,0 +1,10 @@
+services:
+  sbom-demo:
+    build: .
+    container_name: sbom-demo-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ENV=local
