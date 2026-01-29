@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <title>분석 리포트</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+    <div class="container mx-auto py-10 px-4">
+        <div class="mb-6">
+            <a href="/" class="text-blue-600 hover:underline">← 돌아가기</a>
+            <h1 class="text-3xl font-bold text-slate-800 mt-2">🔍 SBOM 분석 리포트</h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500">파일명</p>
+                <p class="text-lg font-bold">{{ result.filename }}</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500">총 패키지 수</p>
+                <p class="text-3xl font-bold text-blue-600">{{ result.total_packages }}</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500">생성 도구</p>
+                <p class="text-lg font-bold text-green-600">{{ result.tool_name }}</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="bg-slate-100 border-b border-slate-200">
+                    <tr>
+                        <th class="px-6 py-4 font-semibold text-slate-700">패키지명</th>
+                        <th class="px-6 py-4 font-semibold text-slate-700">버전</th>
+                        <th class="px-6 py-4 font-semibold text-slate-700">라이선스</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    {% for pkg in result.package_list %}
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 font-medium">{{ pkg.name }}</td>
+                        <td class="px-6 py-4 text-slate-600">{{ pkg.version }}</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 bg-slate-100 text-xs rounded border">{{ pkg.license }}</span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
