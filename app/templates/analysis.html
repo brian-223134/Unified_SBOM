@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <title>SBOM 분석 리포트</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden-row { display: none; }
+        .cicd-hidden { display: none !important; }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <div class="container mx-auto py-10 px-4">
+        <div class="mb-6 flex justify-between items-end">
+            <div>
+                <a href="/" class="text-indigo-600 hover:underline text-sm">← 메인으로 돌아가기</a>
+                <h1 class="text-3xl font-bold text-slate-800 mt-2">🔍 SBOM 분석 리포트</h1>
+            </div>
+            <div class="text-right">
+                <p class="text-slate-500 text-sm mb-2 font-mono">{{ result.filename }}</p>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="cicd-filter" class="sr-only peer" onchange="filterRows()">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                    <span class="ml-3 text-sm font-bold text-indigo-700">CI/CD 항목 숨기기</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">총 탐지 패키지</p>
+                <p class="text-3xl font-bold text-indigo-600">{{ result.total_packages }} <span class="text-lg text-slate-400 font-normal">개</span></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">분석 도구</p>
+                <p class="text-3xl font-bold text-emerald-600 capitalize">{{ result.tool_name }}</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="bg-slate-50 border-b">
+                    <tr>
+                        <th class="px-6 py-4 w-16">#</th>
+                        <th class="px-6 py-4">패키지명</th>
+                        <th class="px-6 py-4">버전</th>
+                        <th class="px-6 py-4">라이선스</th>
+                    </tr>
+                </thead>
+                <tbody id="package-table-body" class="divide-y divide-slate-100">
+                    {% for pkg in result.package_list %}
+                    <tr class="hover:bg-slate-50 transition {% if loop.index > 15 %}hidden-row{% endif %} {% if pkg.is_cicd %}cicd-row{% endif %}">
+                        <td class="px-6 py-4 text-slate-400 text-sm">{{ loop.index }}</td>
+                        <td class="px-6 py-4 font-medium text-slate-800">
+                            {{ pkg.name }}
+                            {% if pkg.is_cicd %}
+                            <span class="ml-2 text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded border border-amber-200 font-bold uppercase tracking-tight">CI/CD</span>
+                            {% endif %}
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 font-mono text-sm">{{ pkg.version }}</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 bg-slate-100 text-xs rounded border border-slate-200 text-slate-500">{{ pkg.license }}</span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% if result.total_packages > 15 %}
+            <div id="view-all-section" class="p-4 bg-slate-50 text-center border-t">
+                <button onclick="showAllAndFilter()" class="bg-white border px-6 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-indigo-600 shadow-sm transition">
+                    전체 {{ result.total_packages }} 개 패키지 모두 보기 ↓
+                </button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function filterRows() {
+            const isChecked = document.getElementById('cicd-filter').checked;
+            const cicdRows = document.querySelectorAll('.cicd-row');
+            cicdRows.forEach(row => {
+                if (isChecked) row.classList.add('cicd-hidden');
+                else row.classList.remove('cicd-hidden');
+            });
+        }
+
+        function showAllAndFilter() {
+            document.querySelectorAll('.hidden-row').forEach(row => row.classList.remove('hidden-row'));
+            document.getElementById('view-all-section').style.display = 'none';
+            filterRows(); // 현재 필터 상태 유지
+        }
+    </script>
+</body>
+</html>
