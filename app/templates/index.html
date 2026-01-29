@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <title>Unified SBOM Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-indigo-700 p-4 text-white shadow-lg">
+        <div class="container mx-auto">
+            <h1 class="text-2xl font-bold flex items-center gap-2">🛡️ Unified SBOM Analyzer</h1>
+        </div>
+    </nav>
+    
+    <main class="container mx-auto mt-10 p-6">
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="p-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-2">SBOM 통합 분석</h2>
+                <p class="text-gray-500 mb-8 text-sm">Hatbom과 Syft에서 추출한 JSON 파일을 각각 업로드해 주세요.</p>
+                
+                <form action="/upload" method="post" enctype="multipart/form-data" class="space-y-6">
+                    <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                        <label class="block text-sm font-bold text-blue-700 mb-2">1. Hatbom SBOM 파일</label>
+                        <input type="file" name="hatbom_file" required
+                            class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                    </div>
+
+                    <div class="p-4 bg-green-50 rounded-lg border border-green-100">
+                        <label class="block text-sm font-bold text-green-700 mb-2">2. Syft SBOM 파일</label>
+                        <input type="file" name="syft_file" required
+                            class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-green-600 file:text-white hover:file:bg-green-700">
+                    </div>
+
+                    <button type="submit" 
+                        class="w-full bg-gray-800 text-white font-bold py-3 px-4 rounded-lg hover:bg-black transition duration-200 shadow-lg">
+                        두 SBOM 통합 분석 시작
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
