@@ -12,6 +12,8 @@ BASE_DIR = Path(__file__).resolve().parent
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
+cicd_keywords = ['github', 'action', 'docker', 'workflow', 'yaml', 'yml']
+
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
@@ -46,42 +48,36 @@ async def health_check():
 
 @app.post("/analyze-single", response_class=HTMLResponse)
 async def analyze_single_sbom(request: Request, file: UploadFile = File(...)):
-    if not file.filename.endswith('.json'):
-        raise HTTPException(status_code=400, detail="JSON 파일만 업로드 가능합니다.")
-
     content = await file.read()
     try:
         sbom_data = json.loads(content)
     except json.JSONDecodeError:
-        raise HTTPException(status_code=400, detail="유효한 JSON 형식이 아닙니다.")
+        raise HTTPException(status_code=400, detail="유효하지 않은 JSON 파일입니다.")
 
-    # --- 안전한 도구 이름(tool_name) 추출 로직 ---
+    # 1. 도구 이름 추출 (Syft 1.6 버전 대응)
     metadata = sbom_data.get("metadata", {})
     tools = metadata.get("tools", {})
     tool_name = "Unknown"
-
-    if isinstance(tools, list) and len(tools) > 0:
-        # 구버전 CycloneDX (리스트 형태)
-        tool_name = tools[0].get("name", "Unknown")
-    elif isinstance(tools, dict):
-        # 신버전 CycloneDX (객체 형태: components나 services 안에 도구 정보 포함)
+    if isinstance(tools, dict):
         tool_components = tools.get("components", [])
-        if tool_components:
-            tool_name = tool_components[0].get("name", "Unknown")
-        else:
-            # metadata.tools 자체가 직접 정보를 담고 있는 경우 대비
-            tool_name = tools.get("name", "Unknown")
+        tool_name = tool_components[0].get("name", "Unknown") if tool_components else "Unknown"
+    elif isinstance(tools, list) and len(tools) > 0:
+        tool_name = tools[0].get("name", "Unknown")
 
-    # --- 패키지 목록 추출 ---
+    # 2. 패키지 분석 및 CI/CD 필터링 태그 부여
+    cicd_keywords = ['github', 'action', 'docker', 'workflow', 'yaml', 'yml', '.github/']
     components = sbom_data.get("components", [])
     package_list = []
     
     for c in components:
-        # 라이선스 정보 추출 (안전하게)
+        name = c.get("name", "Unknown")
+        # 이름이나 경로에 CI/CD 키워드가 포함되었는지 확인
+        is_cicd = any(key in name.lower() for key in cicd_keywords)
+        
+        # 라이선스 추출
         licenses = c.get("licenses", [])
         lic_name = "N/A"
         if licenses:
-            # license 객체 혹은 expression 확인
             lic_item = licenses[0]
             if "license" in lic_item:
                 lic_name = lic_item["license"].get("id") or lic_item["license"].get("name", "N/A")
@@ -89,19 +85,17 @@ async def analyze_single_sbom(request: Request, file: UploadFile = File(...)):
                 lic_name = lic_item["expression"]
 
         package_list.append({
-            "name": c.get("name", "Unknown"),
+            "name": name,
             "version": c.get("version", "Unknown"),
-            "license": lic_name
+            "license": lic_name,
+            "is_cicd": is_cicd
         })
 
     analysis_result = {
         "filename": file.filename,
         "total_packages": len(components),
         "tool_name": tool_name,
-        "package_list": package_list[:50]  # 상위 50개까지만 표시
+        "package_list": package_list
     }
 
-    return templates.TemplateResponse("analysis.html", {
-        "request": request, 
-        "result": analysis_result
-    })
+    return templates.TemplateResponse("analysis.html", {"request": request, "result": analysis_result})
