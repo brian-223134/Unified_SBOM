@@ -11,3 +11,94 @@ parse.py에서 파싱된 Hatbom과 Syft 데이터를 통합합니다.
     - 유사도가 일정 기준 이상인 경우 중복으로 간주하고 하나의 데이터로 통합합니다. (주로 name 필드를 기준으로 하며 version까지 같은 경우 동일하다고 판단)
 2. 통합된 데이터를 JSON 형식으로 반환합니다.
 """
+
+import uuid
+from datetime import datetime
+from typing import List, Dict, Any
+from app.models.hatbom_sbom import HatbomSbom
+from app.models.syft_sbom import SyftSbom
+from app.models.unified_sbom import UnifiedSbom, UnifiedComponent
+
+class SBOMIntegrator:
+    def __init__(self):
+        self.unified_sbom = UnifiedSbom()
+
+    def integrate(self, hatbom: HatbomSbom, syft: SyftSbom) -> UnifiedSbom:
+        """
+        두 도구의 SBOM 객체를 받아 하나로 통합합니다.
+        """
+        print("[INFO] SBOM 통합 프로세스를 시작합니다.")
+        
+        # 통합 컴포넌트를 저장할 딕셔너리 (Key: 식별자)
+        merged_map: Dict[str, UnifiedComponent] = {}
+
+        # 1. Syft 데이터를 기본 베이스로 설정 (패키지 정보 중심)
+        for s_comp in syft.components:
+            key = self._generate_key(s_comp.name, s_comp.version, s_comp.purl)
+            
+            unified_comp = UnifiedComponent(
+                name=s_comp.name,
+                version=s_comp.version,
+                type=s_comp.type,
+                bom_ref=s_comp.bom_ref,
+                purl=s_comp.purl,
+                licenses=[{"license": {"id": l.id, "name": l.name}} for l in s_comp.licenses],
+                properties=[{"name": "source_tool", "value": "Syft"}]
+            )
+            merged_map[key] = unified_comp
+
+        # 2. Hatbom 데이터를 병합 (파일 해시 정보 보완)
+        for h_comp in hatbom.components:
+            key = self._generate_key(h_comp.name, h_comp.version, h_comp.purl)
+            
+            if key in merged_map:
+                # 이미 Syft에 존재하는 패키지라면 해시 정보만 추가
+                existing = merged_map[key]
+                existing.hashes.extend([{"alg": h.alg, "content": h.content} for h in h_comp.hashes])
+                # 중복되지 않도록 리스트 정리 (선택 사항)
+                existing.properties.append({"name": "integrated_with", "value": "Hatbom"})
+            else:
+                # Syft에는 없지만 Hatbom에만 있는 새로운 데이터라면 추가
+                new_comp = UnifiedComponent(
+                    name=h_comp.name,
+                    version=h_comp.version,
+                    type=h_comp.type,
+                    bom_ref=h_comp.bom_ref,
+                    purl=h_comp.purl,
+                    group=h_comp.group,
+                    hashes=[{"alg": h.alg, "content": h.content} for h in h_comp.hashes],
+                    properties=[{"name": "source_tool", "value": "Hatbom"}]
+                )
+                merged_map[key] = new_comp
+
+        # 3. 결과 객체 구성
+        self.unified_sbom.components = list(merged_map.values())
+        
+        # 의존성 정보 통합 (단순 합집합 예시)
+        self.unified_sbom.dependencies = syft.metadata.main_component # 필요에 따라 확장 가능
+        
+        print(f"[SUCCESS] 통합 완료: 총 {len(self.unified_sbom.components)} 개의 컴포넌트가 병합되었습니다.")
+        return self.unified_sbom
+
+    def _generate_key(self, name: str, version: str, purl: str = None) -> str:
+        """컴포넌트 식별을 위한 고유 키 생성 (PURL 우선)"""
+        if purl:
+            return purl
+        return f"{name}@{version}"
+
+    def save_to_json(self, output_path: str):
+        """통합된 결과를 JSON 파일로 저장"""
+        import json
+        from dataclasses import asdict
+        
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(asdict(self.unified_sbom), f, indent=2, ensure_ascii=False)
+        print(f"[INFO] 통합 SBOM이 저장되었습니다: {output_path}")
+
+# 실행 예시
+if __name__ == "__main__":
+    # parse.py를 통해 얻은 객체들이 있다고 가정
+    # integrator = SBOMIntegrator()
+    # final_sbom = integrator.integrate(hatbom_obj, syft_obj)
+    # integrator.save_to_json("integrated_sbom.json")
+    pass

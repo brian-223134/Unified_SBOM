@@ -1,8 +1,8 @@
 import os
 import json
 from typing import Any, Dict, Optional, Union
-from models.hatbom_sbom import HatbomSbom
-from models.syft_sbom import SyftSbom
+from app.models.hatbom_sbom import HatbomSbom
+from app.models.syft_sbom import SyftSbom
 
 """
 parse.py
