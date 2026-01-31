@@ -8,3 +8,6 @@
 ``` powershell
 docker-compose up --build
 ```
+
+# 테스트 방법
+- root directory에서 app/test/ directory 내의 test 파일을 직접 불러서 사용
