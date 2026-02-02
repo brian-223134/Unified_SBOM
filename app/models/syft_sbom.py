@@ -20,6 +20,7 @@ for comp in syft_sbom.components:
 - 기존의 components.author 필드의 경우 이름과 이메일 혹은 이름만 있는 경우가 있다. 이를 parsing해야 한다.
 - 아래는 python3에서 제공하는 email.utils 모듈을 활용한 예시이다.
 
+---
 1. Parsing and Formatting a Single Email Address
 import email.utils
 import re
@@ -47,6 +48,77 @@ regex_pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 found_emails = re.findall(regex_pattern, text)
 
 print("Found emails:", found_emails)
+
+---
+3. 단일 저자 및 복수 저자를 동시에 처리하는 로직 예시
+
+import email.utils
+from typing import List, Dict, Optional
+
+def parse_author_string(author_string: str) -> List[Dict[str, Optional[str]]]:
+    """
+    단일 또는 여러 명의 저자가 포함된 author 문자열을 파싱합니다.
+    
+    입력 예시:
+    - 단일: "Alex Grönholm <alex.gronholm@nextday.fi>"
+    - 여러명: "Filipe Laíns <lains@riseup.net>, Bernát Gábor <gaborjbernat@gmail.com>"
+    
+    반환: [{"name": "이름", "email": "이메일주소"}, ...]
+    """
+    if not author_string or not author_string.strip():
+        return []
+    
+    # email.utils.getaddresses()는 쉼표로 구분된 여러 주소를 파싱할 수 있음
+    # 리스트로 감싸서 전달해야 함
+    parsed_addresses = email.utils.getaddresses([author_string])
+    
+    authors = []
+    for name, email_addr in parsed_addresses:
+        # 이름과 이메일이 모두 비어있으면 건너뜀
+        if not name and not email_addr:
+            continue
+            
+        authors.append({
+            "name": name if name else None,
+            "email": email_addr if email_addr else None
+        })
+    
+    return authors
+
+
+# 테스트
+if __name__ == "__main__":
+    # 단일 저자
+    single_author = "Alex Grönholm <alex.gronholm@nextday.fi>"
+    
+    # 여러 저자
+    multiple_authors = "Filipe Laíns <lains@riseup.net>, Bernát Gábor <gaborjbernat@gmail.com>, layday <layday@protonmail.com>, Henry Schreiner <henryschreineriii@gmail.com>"
+    
+    # 이메일만 있는 경우
+    email_only = "test@example.com"
+    
+    # 이름만 있는 경우
+    name_only = "John Doe"
+    
+    print("=== 단일 저자 ===")
+    result = parse_author_string(single_author)
+    for author in result:
+        print(f"  Name: {author['name']}, Email: {author['email']}")
+    
+    print("\n=== 여러 저자 ===")
+    result = parse_author_string(multiple_authors)
+    for author in result:
+        print(f"  Name: {author['name']}, Email: {author['email']}")
+    
+    print("\n=== 이메일만 ===")
+    result = parse_author_string(email_only)
+    for author in result:
+        print(f"  Name: {author['name']}, Email: {author['email']}")
+    
+    print("\n=== 이름만 ===")
+    result = parse_author_string(name_only)
+    for author in result:
+        print(f"  Name: {author['name']}, Email: {author['email']}")
 '''
 
 from dataclasses import dataclass, field
