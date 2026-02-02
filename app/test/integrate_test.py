@@ -4,6 +4,11 @@ from app.models.syft_sbom import SyftSbom, Component as SyftComponent, License
 from app.models.unified_sbom import UnifiedSbom
 from app.services.integrate import SBOMIntegrator
 
+'''
+실행 방법
+python -m app.test.integrate_test
+'''
+
 class TestSBOMIntegrator(unittest.TestCase):
     def setUp(self):
         """테스트에 사용할 가상 데이터를 준비합니다."""

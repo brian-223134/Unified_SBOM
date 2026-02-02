@@ -1,0 +1,3569 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:7d4da4e4-f178-93f9-ec61-7bc7aeeea205",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-01-29T05:45:43.073084+00:00",
+    "authors": [
+      {
+        "name": "IoTcube - https://iotcube.net"
+      }
+    ],
+    "component": {
+      "group": "",
+      "name": "transformers",
+      "version": "",
+      "type": "application",
+      "bom-ref": "pkg:generic/transformers",
+      "purl": "pkg:generic/transformers"
+    }
+  },
+  "dependencies": [
+    {
+      "ref": "transformers",
+      "dependsOn": [
+        "transformers v4.44.0",
+        "numpy v2.2.6",
+        "setuptools v80.9.0",
+        "colorama 0.4.6",
+        "tqdm v4.67.1",
+        "pyyaml 6.0.3",
+        "python-certifi 2025.10.05",
+        "filesystem_spec 2025.9.0",
+        "rich v13.9.1"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "group": "transformers",
+      "name": "__init__",
+      "version": "0.0.0-8377bee2d5c2",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/__init__@0.0.0-8377bee2d5c2#/.venv/Lib/site-packages/transformers/data/processors/__init__.py",
+      "purl": "pkg:generic/transformers/__init__@0.0.0-8377bee2d5c2#/.venv/Lib/site-packages/transformers/data/processors/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8377bee2d5c284edb5dc0421cf202446"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "tpu",
+      "version": "0.0.0-c78ebe5b30a2",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/tpu@0.0.0-c78ebe5b30a2#/.venv/Lib/site-packages/transformers/integrations/tpu.py",
+      "purl": "pkg:generic/transformers/tpu@0.0.0-c78ebe5b30a2#/.venv/Lib/site-packages/transformers/integrations/tpu.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c78ebe5b30a28e0413a91fdcb7d28b62"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "convert_bert_original_tf2_checkpoint_to_pytorch",
+      "version": "0.0.0-18cdaf62f42a",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/convert_bert_original_tf2_checkpoint_to_pytorch@0.0.0-18cdaf62f42a#/.venv/Lib/site-packages/transformers/models/bert/convert_bert_original_tf2_checkpoint_to_pytorch.py",
+      "purl": "pkg:generic/transformers/convert_bert_original_tf2_checkpoint_to_pytorch@0.0.0-18cdaf62f42a#/.venv/Lib/site-packages/transformers/models/bert/convert_bert_original_tf2_checkpoint_to_pytorch.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "18cdaf62f42a2345d49525c55f07b7cf"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "convert_clap_original_pytorch_to_hf",
+      "version": "0.0.0-d7ffa5340d62",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/convert_clap_original_pytorch_to_hf@0.0.0-d7ffa5340d62#/.venv/Lib/site-packages/transformers/models/clap/convert_clap_original_pytorch_to_hf.py",
+      "purl": "pkg:generic/transformers/convert_clap_original_pytorch_to_hf@0.0.0-d7ffa5340d62#/.venv/Lib/site-packages/transformers/models/clap/convert_clap_original_pytorch_to_hf.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d7ffa5340d62ac43a2ed52c801a73a6d"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "__init__",
+      "version": "0.0.0-e4853f8cc1fb",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/__init__@0.0.0-e4853f8cc1fb#/.venv/Lib/site-packages/transformers/models/esm/openfold_utils/__init__.py",
+      "purl": "pkg:generic/transformers/__init__@0.0.0-e4853f8cc1fb#/.venv/Lib/site-packages/transformers/models/esm/openfold_utils/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e4853f8cc1fbe863892412d3f2d6ca93"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "convert_custom_code_checkpoint",
+      "version": "0.0.0-909c7530e888",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/convert_custom_code_checkpoint@0.0.0-909c7530e888#/.venv/Lib/site-packages/transformers/models/falcon/convert_custom_code_checkpoint.py",
+      "purl": "pkg:generic/transformers/convert_custom_code_checkpoint@0.0.0-909c7530e888#/.venv/Lib/site-packages/transformers/models/falcon/convert_custom_code_checkpoint.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "909c7530e8884ffb057364b7a066cfa5"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "convert_kosmos2_original_pytorch_checkpoint_to_pytorch",
+      "version": "0.0.0-b5022024bc85",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/convert_kosmos2_original_pytorch_checkpoint_to_pytorch@0.0.0-b5022024bc85#/.venv/Lib/site-packages/transformers/models/kosmos2/convert_kosmos2_original_pytorch_checkpoint_to_pytorch.py",
+      "purl": "pkg:generic/transformers/convert_kosmos2_original_pytorch_checkpoint_to_pytorch@0.0.0-b5022024bc85#/.venv/Lib/site-packages/transformers/models/kosmos2/convert_kosmos2_original_pytorch_checkpoint_to_pytorch.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b5022024bc85f7b20abfaf2ef33ff61c"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "constants",
+      "version": "0.0.0-8ec2677c8716",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/constants@0.0.0-8ec2677c8716#/.venv/Lib/site-packages/transformers/utils/constants.py",
+      "purl": "pkg:generic/transformers/constants@0.0.0-8ec2677c8716#/.venv/Lib/site-packages/transformers/utils/constants.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8ec2677c87163d4cedac713fb94d583f"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "dummy_detectron2_objects",
+      "version": "0.0.0-3e7115952ba6",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/dummy_detectron2_objects@0.0.0-3e7115952ba6#/.venv/Lib/site-packages/transformers/utils/dummy_detectron2_objects.py",
+      "purl": "pkg:generic/transformers/dummy_detectron2_objects@0.0.0-3e7115952ba6#/.venv/Lib/site-packages/transformers/utils/dummy_detectron2_objects.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3e7115952ba645bd12268e239c6e3bf5"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "dummy_essentia_and_librosa_and_pretty_midi_and_scipy_and_torch_objects",
+      "version": "0.0.0-249da5a93eac",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/dummy_essentia_and_librosa_and_pretty_midi_and_scipy_and_torch_objects@0.0.0-249da5a93eac#/.venv/Lib/site-packages/transformers/utils/dummy_essentia_and_librosa_and_pretty_midi_and_scipy_and_torch_objects.py",
+      "purl": "pkg:generic/transformers/dummy_essentia_and_librosa_and_pretty_midi_and_scipy_and_torch_objects@0.0.0-249da5a93eac#/.venv/Lib/site-packages/transformers/utils/dummy_essentia_and_librosa_and_pretty_midi_and_scipy_and_torch_objects.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "249da5a93eac1f760a953adc42556b6a"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "dummy_music_objects",
+      "version": "0.0.0-e4a9f7021fc2",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/dummy_music_objects@0.0.0-e4a9f7021fc2#/.venv/Lib/site-packages/transformers/utils/dummy_music_objects.py",
+      "purl": "pkg:generic/transformers/dummy_music_objects@0.0.0-e4a9f7021fc2#/.venv/Lib/site-packages/transformers/utils/dummy_music_objects.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e4a9f7021fc2843cda397c0edf12a137"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "dummy_sentencepiece_and_tokenizers_objects",
+      "version": "0.0.0-c155ea1d411f",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/dummy_sentencepiece_and_tokenizers_objects@0.0.0-c155ea1d411f#/.venv/Lib/site-packages/transformers/utils/dummy_sentencepiece_and_tokenizers_objects.py",
+      "purl": "pkg:generic/transformers/dummy_sentencepiece_and_tokenizers_objects@0.0.0-c155ea1d411f#/.venv/Lib/site-packages/transformers/utils/dummy_sentencepiece_and_tokenizers_objects.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c155ea1d411fa36e6932c3cd19f6ba30"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "dummy_speech_objects",
+      "version": "0.0.0-ca5d8ebf91c4",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/dummy_speech_objects@0.0.0-ca5d8ebf91c4#/.venv/Lib/site-packages/transformers/utils/dummy_speech_objects.py",
+      "purl": "pkg:generic/transformers/dummy_speech_objects@0.0.0-ca5d8ebf91c4#/.venv/Lib/site-packages/transformers/utils/dummy_speech_objects.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ca5d8ebf91c49e87954c99b4c64cc26f"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "sentencepiece_model_pb2_new",
+      "version": "0.0.0-1f32fdbacc4c",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/sentencepiece_model_pb2_new@0.0.0-1f32fdbacc4c#/.venv/Lib/site-packages/transformers/utils/sentencepiece_model_pb2_new.py",
+      "purl": "pkg:generic/transformers/sentencepiece_model_pb2_new@0.0.0-1f32fdbacc4c#/.venv/Lib/site-packages/transformers/utils/sentencepiece_model_pb2_new.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "1f32fdbacc4cd00946254fae06424299"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "optimum_benchmark_wrapper",
+      "version": "0.0.0-aaf60cce010e",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/optimum_benchmark_wrapper@0.0.0-aaf60cce010e#/benchmark/optimum_benchmark_wrapper.py",
+      "purl": "pkg:generic/transformers/optimum_benchmark_wrapper@0.0.0-aaf60cce010e#/benchmark/optimum_benchmark_wrapper.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "aaf60cce010ecac1d2bf843bba568768"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "modular_my_new_model2",
+      "version": "0.0.0-05c862c6eaa2",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/modular_my_new_model2@0.0.0-05c862c6eaa2#/examples/modular-transformers/modular_my_new_model2.py",
+      "purl": "pkg:generic/transformers/modular_my_new_model2@0.0.0-05c862c6eaa2#/examples/modular-transformers/modular_my_new_model2.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "05c862c6eaa2b90bc0b3f01e70f08076"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "conftest",
+      "version": "0.0.0-2d4d05ba8110",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/conftest@0.0.0-2d4d05ba8110#/examples/pytorch/conftest.py",
+      "purl": "pkg:generic/transformers/conftest@0.0.0-2d4d05ba8110#/examples/pytorch/conftest.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2d4d05ba8110f2ff2575edc4f12844a3"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "torch-distributed-gpu-test",
+      "version": "0.0.0-361db980dc41",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/torch-distributed-gpu-test@0.0.0-361db980dc41#/scripts/distributed/torch-distributed-gpu-test.py",
+      "purl": "pkg:generic/transformers/torch-distributed-gpu-test@0.0.0-361db980dc41#/scripts/distributed/torch-distributed-gpu-test.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "361db980dc418b230a423749a693014f"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "test_tokenization_{{cookiecutter.lowercase_modelname}}",
+      "version": "0.0.0-715f56dd5f7f",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/test_tokenization_{{cookiecutter.lowercase_modelname}}@0.0.0-715f56dd5f7f#/templates/adding_a_missing_tokenization_test/cookiecutter-template-{{cookiecutter.modelname}}/test_tokenization_{{cookiecutter.lowercase_modelname}}.py",
+      "purl": "pkg:generic/transformers/test_tokenization_{{cookiecutter.lowercase_modelname}}@0.0.0-715f56dd5f7f#/templates/adding_a_missing_tokenization_test/cookiecutter-template-{{cookiecutter.modelname}}/test_tokenization_{{cookiecutter.lowercase_modelname}}.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "715f56dd5f7f706ca158346f07c1417b"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "test_check_docstrings",
+      "version": "0.0.0-bc5354c389d8",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/test_check_docstrings@0.0.0-bc5354c389d8#/tests/repo_utils/test_check_docstrings.py",
+      "purl": "pkg:generic/transformers/test_check_docstrings@0.0.0-bc5354c389d8#/tests/repo_utils/test_check_docstrings.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bc5354c389d8048009ab82afdbdf33d8"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "test_get_test_info",
+      "version": "0.0.0-c38f0a26b6cf",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/test_get_test_info@0.0.0-c38f0a26b6cf#/tests/repo_utils/test_get_test_info.py",
+      "purl": "pkg:generic/transformers/test_get_test_info@0.0.0-c38f0a26b6cf#/tests/repo_utils/test_get_test_info.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c38f0a26b6cfed6a26db29b1fe1c18f4"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "__init__",
+      "version": "0.0.0-937ee0720748",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/__init__@0.0.0-937ee0720748#/tests/sagemaker/__init__.py",
+      "purl": "pkg:generic/transformers/__init__@0.0.0-937ee0720748#/tests/sagemaker/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "937ee0720748b694d4438a4708c7ba44"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "get_modified_files",
+      "version": "0.0.0-3273504252a1",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/get_modified_files@0.0.0-3273504252a1#/utils/get_modified_files.py",
+      "purl": "pkg:generic/transformers/get_modified_files@0.0.0-3273504252a1#/utils/get_modified_files.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3273504252a142c26760ea6c9bc0b44a"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "set_cuda_devices_for_ci",
+      "version": "0.0.0-c152cd9c231b",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/set_cuda_devices_for_ci@0.0.0-c152cd9c231b#/utils/set_cuda_devices_for_ci.py",
+      "purl": "pkg:generic/transformers/set_cuda_devices_for_ci@0.0.0-c152cd9c231b#/utils/set_cuda_devices_for_ci.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c152cd9c231b4f4ab09dd9bc2f0044f0"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "custom_feature_extraction",
+      "version": "0.0.0-e9b25ecd2d6e",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/custom_feature_extraction@0.0.0-e9b25ecd2d6e#/utils/test_module/custom_feature_extraction.py",
+      "purl": "pkg:generic/transformers/custom_feature_extraction@0.0.0-e9b25ecd2d6e#/utils/test_module/custom_feature_extraction.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e9b25ecd2d6e699abc48812233923114"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "custom_image_processing",
+      "version": "0.0.0-e8aab51cdf25",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/custom_image_processing@0.0.0-e8aab51cdf25#/utils/test_module/custom_image_processing.py",
+      "purl": "pkg:generic/transformers/custom_image_processing@0.0.0-e8aab51cdf25#/utils/test_module/custom_image_processing.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e8aab51cdf255bedb152bfdca79b7613"
+        }
+      ]
+    },
+    {
+      "group": "transformers",
+      "name": "custom_tokenization",
+      "version": "0.0.0-008b49d27849",
+      "type": "file",
+      "bom-ref": "pkg:generic/transformers/custom_tokenization@0.0.0-008b49d27849#/utils/test_module/custom_tokenization.py",
+      "purl": "pkg:generic/transformers/custom_tokenization@0.0.0-008b49d27849#/utils/test_module/custom_tokenization.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "008b49d27849586c362495215e01b124"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_string_helpers",
+      "version": "0.0.0-60008f7e6379",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_string_helpers@0.0.0-60008f7e6379#/.venv/Lib/site-packages/numpy/_core/_string_helpers.py",
+      "purl": "pkg:generic/numpy/_string_helpers@0.0.0-60008f7e6379#/.venv/Lib/site-packages/numpy/_core/_string_helpers.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "60008f7e6379701e5d7e3204d0724d86"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "cversions",
+      "version": "0.0.0-5118e7dbf843",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/cversions@0.0.0-5118e7dbf843#/.venv/Lib/site-packages/numpy/_core/cversions.py",
+      "purl": "pkg:generic/numpy/cversions@0.0.0-5118e7dbf843#/.venv/Lib/site-packages/numpy/_core/cversions.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5118e7dbf843cfa6dd70f787c47b5f9e"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test__exceptions",
+      "version": "0.0.0-f5c574582bf0",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test__exceptions@0.0.0-f5c574582bf0#/.venv/Lib/site-packages/numpy/_core/tests/test__exceptions.py",
+      "purl": "pkg:generic/numpy/test__exceptions@0.0.0-f5c574582bf0#/.venv/Lib/site-packages/numpy/_core/tests/test__exceptions.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f5c574582bf02940b9b39d14120cd668"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_argparse",
+      "version": "0.0.0-be80cbf2b738",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_argparse@0.0.0-be80cbf2b738#/.venv/Lib/site-packages/numpy/_core/tests/test_argparse.py",
+      "purl": "pkg:generic/numpy/test_argparse@0.0.0-be80cbf2b738#/.venv/Lib/site-packages/numpy/_core/tests/test_argparse.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "be80cbf2b738aeec7e8e9b515a396e7e"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_distributor_init",
+      "version": "0.0.0-4423dce00629",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_distributor_init@0.0.0-4423dce00629#/.venv/Lib/site-packages/numpy/_distributor_init.py",
+      "purl": "pkg:generic/numpy/_distributor_init@0.0.0-4423dce00629#/.venv/Lib/site-packages/numpy/_distributor_init.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4423dce0062981de32bff9044da52748"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_pyinstaller",
+      "version": "0.0.0-d40d1cd5838e",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_pyinstaller@0.0.0-d40d1cd5838e#/.venv/Lib/site-packages/numpy/_pyinstaller/tests/test_pyinstaller.py",
+      "purl": "pkg:generic/numpy/test_pyinstaller@0.0.0-d40d1cd5838e#/.venv/Lib/site-packages/numpy/_pyinstaller/tests/test_pyinstaller.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d40d1cd5838e6722b35f4f9a435c3456"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_nbit",
+      "version": "0.0.0-c971044d9d61",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_nbit@0.0.0-c971044d9d61#/.venv/Lib/site-packages/numpy/_typing/_nbit.py",
+      "purl": "pkg:generic/numpy/_nbit@0.0.0-c971044d9d61#/.venv/Lib/site-packages/numpy/_typing/_nbit.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c971044d9d618626c79b7b20a4dbf7b2"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_convertions",
+      "version": "0.0.0-c88f5232af3a",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_convertions@0.0.0-c88f5232af3a#/.venv/Lib/site-packages/numpy/_utils/_convertions.py",
+      "purl": "pkg:generic/numpy/_convertions@0.0.0-c88f5232af3a#/.venv/Lib/site-packages/numpy/_utils/_convertions.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c88f5232af3a03e54e91c8296d57728e"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "__init__",
+      "version": "0.0.0-ebc7ff7bd4db",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/__init__@0.0.0-ebc7ff7bd4db#/.venv/Lib/site-packages/numpy/core/__init__.py",
+      "purl": "pkg:generic/numpy/__init__@0.0.0-ebc7ff7bd4db#/.venv/Lib/site-packages/numpy/core/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ebc7ff7bd4db5d8f680df57dd3fc3579"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_dtype",
+      "version": "0.0.0-06c5bb483d6c",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_dtype@0.0.0-06c5bb483d6c#/.venv/Lib/site-packages/numpy/core/_dtype.py",
+      "purl": "pkg:generic/numpy/_dtype@0.0.0-06c5bb483d6c#/.venv/Lib/site-packages/numpy/core/_dtype.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "06c5bb483d6c671f27c8c75df4e1b72e"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_dtype_ctypes",
+      "version": "0.0.0-5a47c99ee3fb",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_dtype_ctypes@0.0.0-5a47c99ee3fb#/.venv/Lib/site-packages/numpy/core/_dtype_ctypes.py",
+      "purl": "pkg:generic/numpy/_dtype_ctypes@0.0.0-5a47c99ee3fb#/.venv/Lib/site-packages/numpy/core/_dtype_ctypes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5a47c99ee3fb1c41e86e1f5befc1d871"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_internal",
+      "version": "0.0.0-7417b00ac673",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_internal@0.0.0-7417b00ac673#/.venv/Lib/site-packages/numpy/core/_internal.py",
+      "purl": "pkg:generic/numpy/_internal@0.0.0-7417b00ac673#/.venv/Lib/site-packages/numpy/core/_internal.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7417b00ac673479b8aaa82f5944a71aa"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "arrayprint",
+      "version": "0.0.0-cf5d469ed64a",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/arrayprint@0.0.0-cf5d469ed64a#/.venv/Lib/site-packages/numpy/core/arrayprint.py",
+      "purl": "pkg:generic/numpy/arrayprint@0.0.0-cf5d469ed64a#/.venv/Lib/site-packages/numpy/core/arrayprint.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "cf5d469ed64a7cbfe68c341401d73361"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "defchararray",
+      "version": "0.0.0-b0bf36fd5668",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/defchararray@0.0.0-b0bf36fd5668#/.venv/Lib/site-packages/numpy/core/defchararray.py",
+      "purl": "pkg:generic/numpy/defchararray@0.0.0-b0bf36fd5668#/.venv/Lib/site-packages/numpy/core/defchararray.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b0bf36fd566863931aa72c16c6ced9d4"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "einsumfunc",
+      "version": "0.0.0-d7eef3cd27b2",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/einsumfunc@0.0.0-d7eef3cd27b2#/.venv/Lib/site-packages/numpy/core/einsumfunc.py",
+      "purl": "pkg:generic/numpy/einsumfunc@0.0.0-d7eef3cd27b2#/.venv/Lib/site-packages/numpy/core/einsumfunc.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d7eef3cd27b2e8b088ed1d493996bdec"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "fromnumeric",
+      "version": "0.0.0-6232045ff0e7",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/fromnumeric@0.0.0-6232045ff0e7#/.venv/Lib/site-packages/numpy/core/fromnumeric.py",
+      "purl": "pkg:generic/numpy/fromnumeric@0.0.0-6232045ff0e7#/.venv/Lib/site-packages/numpy/core/fromnumeric.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "6232045ff0e72b002d902a123cfa9e9b"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "function_base",
+      "version": "0.0.0-9f8ad7779c0c",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/function_base@0.0.0-9f8ad7779c0c#/.venv/Lib/site-packages/numpy/core/function_base.py",
+      "purl": "pkg:generic/numpy/function_base@0.0.0-9f8ad7779c0c#/.venv/Lib/site-packages/numpy/core/function_base.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9f8ad7779c0c9cc63529d81970dcfa07"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "getlimits",
+      "version": "0.0.0-a81f80567b9b",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/getlimits@0.0.0-a81f80567b9b#/.venv/Lib/site-packages/numpy/core/getlimits.py",
+      "purl": "pkg:generic/numpy/getlimits@0.0.0-a81f80567b9b#/.venv/Lib/site-packages/numpy/core/getlimits.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a81f80567b9be33b905d09b41e0f626e"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "multiarray",
+      "version": "0.0.0-c6cc893a03af",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/multiarray@0.0.0-c6cc893a03af#/.venv/Lib/site-packages/numpy/core/multiarray.py",
+      "purl": "pkg:generic/numpy/multiarray@0.0.0-c6cc893a03af#/.venv/Lib/site-packages/numpy/core/multiarray.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c6cc893a03af90412819237105103a18"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "numeric",
+      "version": "0.0.0-73566aa0b483",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/numeric@0.0.0-73566aa0b483#/.venv/Lib/site-packages/numpy/core/numeric.py",
+      "purl": "pkg:generic/numpy/numeric@0.0.0-73566aa0b483#/.venv/Lib/site-packages/numpy/core/numeric.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "73566aa0b483844ff126985188f576d3"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "numerictypes",
+      "version": "0.0.0-e17f5936f9b9",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/numerictypes@0.0.0-e17f5936f9b9#/.venv/Lib/site-packages/numpy/core/numerictypes.py",
+      "purl": "pkg:generic/numpy/numerictypes@0.0.0-e17f5936f9b9#/.venv/Lib/site-packages/numpy/core/numerictypes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e17f5936f9b9d71756b40ec46753ac59"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "overrides",
+      "version": "0.0.0-3773b06509f7",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/overrides@0.0.0-3773b06509f7#/.venv/Lib/site-packages/numpy/core/overrides.py",
+      "purl": "pkg:generic/numpy/overrides@0.0.0-3773b06509f7#/.venv/Lib/site-packages/numpy/core/overrides.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3773b06509f790621492ace8c8802d6d"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "records",
+      "version": "0.0.0-7d81b5ffae54",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/records@0.0.0-7d81b5ffae54#/.venv/Lib/site-packages/numpy/core/records.py",
+      "purl": "pkg:generic/numpy/records@0.0.0-7d81b5ffae54#/.venv/Lib/site-packages/numpy/core/records.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7d81b5ffae54a92506042160297e4844"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "shape_base",
+      "version": "0.0.0-b395c2209010",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/shape_base@0.0.0-b395c2209010#/.venv/Lib/site-packages/numpy/core/shape_base.py",
+      "purl": "pkg:generic/numpy/shape_base@0.0.0-b395c2209010#/.venv/Lib/site-packages/numpy/core/shape_base.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b395c22090109edd16125c772253962f"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "umath",
+      "version": "0.0.0-53673e9450a6",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/umath@0.0.0-53673e9450a6#/.venv/Lib/site-packages/numpy/core/umath.py",
+      "purl": "pkg:generic/numpy/umath@0.0.0-53673e9450a6#/.venv/Lib/site-packages/numpy/core/umath.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "53673e9450a622674b362a8585bf31c5"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "dtypes",
+      "version": "0.0.0-bd38bc19749f",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/dtypes@0.0.0-bd38bc19749f#/.venv/Lib/site-packages/numpy/dtypes.py",
+      "purl": "pkg:generic/numpy/dtypes@0.0.0-bd38bc19749f#/.venv/Lib/site-packages/numpy/dtypes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bd38bc19749fdc25700905427bdb055d"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "__main__",
+      "version": "0.0.0-7f9115051605",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/__main__@0.0.0-7f9115051605#/.venv/Lib/site-packages/numpy/f2py/__main__.py",
+      "purl": "pkg:generic/numpy/__main__@0.0.0-7f9115051605#/.venv/Lib/site-packages/numpy/f2py/__main__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7f9115051605776b3f56f51f6e8a98a2"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "__version__",
+      "version": "0.0.0-81af01fe5fe8",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/__version__@0.0.0-81af01fe5fe8#/.venv/Lib/site-packages/numpy/f2py/__version__.py",
+      "purl": "pkg:generic/numpy/__version__@0.0.0-81af01fe5fe8#/.venv/Lib/site-packages/numpy/f2py/__version__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "81af01fe5fe8718cade29773a324e445"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "__init__",
+      "version": "0.0.0-0fc11d831d02",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/__init__@0.0.0-0fc11d831d02#/.venv/Lib/site-packages/numpy/f2py/_backends/__init__.py",
+      "purl": "pkg:generic/numpy/__init__@0.0.0-0fc11d831d02#/.venv/Lib/site-packages/numpy/f2py/_backends/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0fc11d831d02cebc63ef37af43cbe553"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "_isocbind",
+      "version": "0.0.0-3bb99974957b",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/_isocbind@0.0.0-3bb99974957b#/.venv/Lib/site-packages/numpy/f2py/_isocbind.py",
+      "purl": "pkg:generic/numpy/_isocbind@0.0.0-3bb99974957b#/.venv/Lib/site-packages/numpy/f2py/_isocbind.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3bb99974957b43bfaebbb7017c58b981"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_common",
+      "version": "0.0.0-f0fea5bcc8dc",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_common@0.0.0-f0fea5bcc8dc#/.venv/Lib/site-packages/numpy/f2py/tests/test_common.py",
+      "purl": "pkg:generic/numpy/test_common@0.0.0-f0fea5bcc8dc#/.venv/Lib/site-packages/numpy/f2py/tests/test_common.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f0fea5bcc8dcb040abe03bc5c5914177"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_parameter",
+      "version": "0.0.0-9168371594f6",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_parameter@0.0.0-9168371594f6#/.venv/Lib/site-packages/numpy/f2py/tests/test_parameter.py",
+      "purl": "pkg:generic/numpy/test_parameter@0.0.0-9168371594f6#/.venv/Lib/site-packages/numpy/f2py/tests/test_parameter.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9168371594f6f1f8697f96f114c6cf2d"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_quoted_character",
+      "version": "0.0.0-f1e637b2e792",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_quoted_character@0.0.0-f1e637b2e792#/.venv/Lib/site-packages/numpy/f2py/tests/test_quoted_character.py",
+      "purl": "pkg:generic/numpy/test_quoted_character@0.0.0-f1e637b2e792#/.venv/Lib/site-packages/numpy/f2py/tests/test_quoted_character.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f1e637b2e7927a49a15af2ddf450375e"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_routines",
+      "version": "0.0.0-eadd281998c1",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_routines@0.0.0-eadd281998c1#/.venv/Lib/site-packages/numpy/f2py/tests/test_routines.py",
+      "purl": "pkg:generic/numpy/test_routines@0.0.0-eadd281998c1#/.venv/Lib/site-packages/numpy/f2py/tests/test_routines.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "eadd281998c13dbe32bc2756ab9a1d77"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_size",
+      "version": "0.0.0-5f79cdad91c5",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_size@0.0.0-5f79cdad91c5#/.venv/Lib/site-packages/numpy/f2py/tests/test_size.py",
+      "purl": "pkg:generic/numpy/test_size@0.0.0-5f79cdad91c5#/.venv/Lib/site-packages/numpy/f2py/tests/test_size.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5f79cdad91c53e95b3b00240332d400d"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_value_attrspec",
+      "version": "0.0.0-c96051bdcf98",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_value_attrspec@0.0.0-c96051bdcf98#/.venv/Lib/site-packages/numpy/f2py/tests/test_value_attrspec.py",
+      "purl": "pkg:generic/numpy/test_value_attrspec@0.0.0-c96051bdcf98#/.venv/Lib/site-packages/numpy/f2py/tests/test_value_attrspec.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c96051bdcf98a97143cd378e5eb46710"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "array_utils",
+      "version": "0.0.0-ea635e884675",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/array_utils@0.0.0-ea635e884675#/.venv/Lib/site-packages/numpy/lib/array_utils.py",
+      "purl": "pkg:generic/numpy/array_utils@0.0.0-ea635e884675#/.venv/Lib/site-packages/numpy/lib/array_utils.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ea635e884675f87e96b6cf2ff98b2588"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "stride_tricks",
+      "version": "0.0.0-104cc20f5ac0",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/stride_tricks@0.0.0-104cc20f5ac0#/.venv/Lib/site-packages/numpy/lib/stride_tricks.py",
+      "purl": "pkg:generic/numpy/stride_tricks@0.0.0-104cc20f5ac0#/.venv/Lib/site-packages/numpy/lib/stride_tricks.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "104cc20f5ac0fa0ed4362684f46afe58"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_array_utils",
+      "version": "0.0.0-f72b79225ef8",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_array_utils@0.0.0-f72b79225ef8#/.venv/Lib/site-packages/numpy/lib/tests/test_array_utils.py",
+      "purl": "pkg:generic/numpy/test_array_utils@0.0.0-f72b79225ef8#/.venv/Lib/site-packages/numpy/lib/tests/test_array_utils.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f72b79225ef844418e257597e701bda5"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "user_array",
+      "version": "0.0.0-f4a6f5db947a",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/user_array@0.0.0-f4a6f5db947a#/.venv/Lib/site-packages/numpy/lib/user_array.py",
+      "purl": "pkg:generic/numpy/user_array@0.0.0-f4a6f5db947a#/.venv/Lib/site-packages/numpy/lib/user_array.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f4a6f5db947a6ca62ae894fd7c8de963"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "__init__",
+      "version": "0.0.0-b2d6b30fe48f",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/__init__@0.0.0-b2d6b30fe48f#/.venv/Lib/site-packages/numpy/matrixlib/__init__.py",
+      "purl": "pkg:generic/numpy/__init__@0.0.0-b2d6b30fe48f#/.venv/Lib/site-packages/numpy/matrixlib/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b2d6b30fe48f1269a648f464d1d51bb8"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_numeric",
+      "version": "0.0.0-82cb7d2ecd46",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_numeric@0.0.0-82cb7d2ecd46#/.venv/Lib/site-packages/numpy/matrixlib/tests/test_numeric.py",
+      "purl": "pkg:generic/numpy/test_numeric@0.0.0-82cb7d2ecd46#/.venv/Lib/site-packages/numpy/matrixlib/tests/test_numeric.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "82cb7d2ecd4691e8c318d2dfdc602fd6"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test_regression",
+      "version": "0.0.0-bb4877013855",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test_regression@0.0.0-bb4877013855#/.venv/Lib/site-packages/numpy/matrixlib/tests/test_regression.py",
+      "purl": "pkg:generic/numpy/test_regression@0.0.0-bb4877013855#/.venv/Lib/site-packages/numpy/matrixlib/tests/test_regression.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bb4877013855aa10d5e59f4845e0a6dd"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "parse",
+      "version": "0.0.0-f107be3ae014",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/parse@0.0.0-f107be3ae014#/.venv/Lib/site-packages/numpy/random/_examples/cffi/parse.py",
+      "purl": "pkg:generic/numpy/parse@0.0.0-f107be3ae014#/.venv/Lib/site-packages/numpy/random/_examples/cffi/parse.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f107be3ae0147698e80ba9bc65922ce6"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "test__all__",
+      "version": "0.0.0-c6343d587ac3",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/test__all__@0.0.0-c6343d587ac3#/.venv/Lib/site-packages/numpy/tests/test__all__.py",
+      "purl": "pkg:generic/numpy/test__all__@0.0.0-c6343d587ac3#/.venv/Lib/site-packages/numpy/tests/test__all__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c6343d587ac3aa03816947a18395065c"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "arrayprint",
+      "version": "0.0.0-5e82763410a5",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/arrayprint@0.0.0-5e82763410a5#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/arrayprint.py",
+      "purl": "pkg:generic/numpy/arrayprint@0.0.0-5e82763410a5#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/arrayprint.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5e82763410a527f2044322480c834339"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "dtype",
+      "version": "0.0.0-2cc31137d38f",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/dtype@0.0.0-2cc31137d38f#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/dtype.py",
+      "purl": "pkg:generic/numpy/dtype@0.0.0-2cc31137d38f#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/dtype.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2cc31137d38f2da50300c51352d6051b"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "fromnumeric",
+      "version": "0.0.0-76b2b3c9d5bd",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/fromnumeric@0.0.0-76b2b3c9d5bd#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/fromnumeric.py",
+      "purl": "pkg:generic/numpy/fromnumeric@0.0.0-76b2b3c9d5bd#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/fromnumeric.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "76b2b3c9d5bd4846129aa27c6d244426"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "lib_user_array",
+      "version": "0.0.0-df23002ce70d",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/lib_user_array@0.0.0-df23002ce70d#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/lib_user_array.py",
+      "purl": "pkg:generic/numpy/lib_user_array@0.0.0-df23002ce70d#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/lib_user_array.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "df23002ce70db1fe1063933dfba63866"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "lib_utils",
+      "version": "0.0.0-aa73491489a7",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/lib_utils@0.0.0-aa73491489a7#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/lib_utils.py",
+      "purl": "pkg:generic/numpy/lib_utils@0.0.0-aa73491489a7#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/lib_utils.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "aa73491489a7a49b6b65a8899aa1efc8"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "lib_version",
+      "version": "0.0.0-35e5f236726d",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/lib_version@0.0.0-35e5f236726d#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/lib_version.py",
+      "purl": "pkg:generic/numpy/lib_version@0.0.0-35e5f236726d#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/lib_version.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "35e5f236726d00feef7692bfa3a54c6e"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "modules",
+      "version": "0.0.0-f2d6e1655fc9",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/modules@0.0.0-f2d6e1655fc9#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/modules.py",
+      "purl": "pkg:generic/numpy/modules@0.0.0-f2d6e1655fc9#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/modules.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f2d6e1655fc98503e2afceb85aabbd5d"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "ndarray_shape_manipulation",
+      "version": "0.0.0-e80f3ced1cb6",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/ndarray_shape_manipulation@0.0.0-e80f3ced1cb6#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/ndarray_shape_manipulation.py",
+      "purl": "pkg:generic/numpy/ndarray_shape_manipulation@0.0.0-e80f3ced1cb6#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/ndarray_shape_manipulation.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e80f3ced1cb6297c996cd4e9911010b2"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "nditer",
+      "version": "0.0.0-bb40ac60689d",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/nditer@0.0.0-bb40ac60689d#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/nditer.py",
+      "purl": "pkg:generic/numpy/nditer@0.0.0-bb40ac60689d#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/nditer.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bb40ac60689d659067d201658046e218"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "numerictypes",
+      "version": "0.0.0-c8f6be8aaff6",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/numerictypes@0.0.0-c8f6be8aaff6#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/numerictypes.py",
+      "purl": "pkg:generic/numpy/numerictypes@0.0.0-c8f6be8aaff6#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/numerictypes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c8f6be8aaff62a153a2667cc1c8321f1"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "random",
+      "version": "0.0.0-bbc4e948d8f0",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/random@0.0.0-bbc4e948d8f0#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/random.py",
+      "purl": "pkg:generic/numpy/random@0.0.0-bbc4e948d8f0#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/random.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bbc4e948d8f069bbec17e8909a735c74"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "ufunc_config",
+      "version": "0.0.0-917ac13122d7",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/ufunc_config@0.0.0-917ac13122d7#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/ufunc_config.py",
+      "purl": "pkg:generic/numpy/ufunc_config@0.0.0-917ac13122d7#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/ufunc_config.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "917ac13122d73e87e645dc0f66fa446d"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "ufuncs",
+      "version": "0.0.0-0ef2d36850be",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/ufuncs@0.0.0-0ef2d36850be#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/ufuncs.py",
+      "purl": "pkg:generic/numpy/ufuncs@0.0.0-0ef2d36850be#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/ufuncs.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0ef2d36850be6b4f9c61755c2507ebd2"
+        }
+      ]
+    },
+    {
+      "group": "numpy",
+      "name": "warnings_and_errors",
+      "version": "0.0.0-b745ac53c22c",
+      "type": "file",
+      "bom-ref": "pkg:generic/numpy/warnings_and_errors@0.0.0-b745ac53c22c#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/warnings_and_errors.py",
+      "purl": "pkg:generic/numpy/warnings_and_errors@0.0.0-b745ac53c22c#/.venv/Lib/site-packages/numpy/typing/tests/data/pass/warnings_and_errors.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b745ac53c22c7d449db00fae8211d579"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "override",
+      "version": "0.0.0-5400fb9b5184",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/override@0.0.0-5400fb9b5184#/.venv/Lib/site-packages/_distutils_hack/override.py",
+      "purl": "pkg:generic/setuptools/override@0.0.0-5400fb9b5184#/.venv/Lib/site-packages/_distutils_hack/override.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5400fb9b518442950108df9293728079"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_structures",
+      "version": "0.0.0-ab60f03a01ce",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_structures@0.0.0-ab60f03a01ce#/.venv/Lib/site-packages/pip/_vendor/packaging/_structures.py",
+      "purl": "pkg:generic/setuptools/_structures@0.0.0-ab60f03a01ce#/.venv/Lib/site-packages/pip/_vendor/packaging/_structures.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ab60f03a01ce33eebb1cc7bee06bf5f0"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_spdx",
+      "version": "0.0.0-def1831e8a9b",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_spdx@0.0.0-def1831e8a9b#/.venv/Lib/site-packages/pip/_vendor/packaging/licenses/_spdx.py",
+      "purl": "pkg:generic/setuptools/_spdx@0.0.0-def1831e8a9b#/.venv/Lib/site-packages/pip/_vendor/packaging/licenses/_spdx.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "def1831e8a9b891e8874a2b629f8b12f"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_types",
+      "version": "0.0.0-ede52e13fbe0",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_types@0.0.0-ede52e13fbe0#/.venv/Lib/site-packages/pip/_vendor/tomli/_types.py",
+      "purl": "pkg:generic/setuptools/_types@0.0.0-ede52e13fbe0#/.venv/Lib/site-packages/pip/_vendor/tomli/_types.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ede52e13fbe0322652e2911ba379ca4b"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "setup",
+      "version": "0.0.0-38fcefeb809b",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/setup@0.0.0-38fcefeb809b#/.venv/Lib/site-packages/pkg_resources/tests/data/my-test-package-source/setup.py",
+      "purl": "pkg:generic/setuptools/setup@0.0.0-38fcefeb809b#/.venv/Lib/site-packages/pkg_resources/tests/data/my-test-package-source/setup.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "38fcefeb809b73f917ec989ad3935600"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_find_distributions",
+      "version": "0.0.0-0204fceacf11",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_find_distributions@0.0.0-0204fceacf11#/.venv/Lib/site-packages/pkg_resources/tests/test_find_distributions.py",
+      "purl": "pkg:generic/setuptools/test_find_distributions@0.0.0-0204fceacf11#/.venv/Lib/site-packages/pkg_resources/tests/test_find_distributions.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0204fceacf118c9b528dd70f24ec8f6c"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_markers",
+      "version": "0.0.0-c306dae26619",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_markers@0.0.0-c306dae26619#/.venv/Lib/site-packages/pkg_resources/tests/test_markers.py",
+      "purl": "pkg:generic/setuptools/test_markers@0.0.0-c306dae26619#/.venv/Lib/site-packages/pkg_resources/tests/test_markers.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c306dae266190a4c2cd9cb7b9fa0f327"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__init__",
+      "version": "0.0.0-33d69150935e",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__init__@0.0.0-33d69150935e#/.venv/Lib/site-packages/setuptools/_distutils/__init__.py",
+      "purl": "pkg:generic/setuptools/__init__@0.0.0-33d69150935e#/.venv/Lib/site-packages/setuptools/_distutils/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "33d69150935e0a74fc12b297005d6a1b"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_log",
+      "version": "0.0.0-75a8fe06c830",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_log@0.0.0-75a8fe06c830#/.venv/Lib/site-packages/setuptools/_distutils/_log.py",
+      "purl": "pkg:generic/setuptools/_log@0.0.0-75a8fe06c830#/.venv/Lib/site-packages/setuptools/_distutils/_log.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "75a8fe06c830e879d768ac77f48c3517"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_macos_compat",
+      "version": "0.0.0-bbc537f9afc0",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_macos_compat@0.0.0-bbc537f9afc0#/.venv/Lib/site-packages/setuptools/_distutils/_macos_compat.py",
+      "purl": "pkg:generic/setuptools/_macos_compat@0.0.0-bbc537f9afc0#/.venv/Lib/site-packages/setuptools/_distutils/_macos_compat.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bbc537f9afc0593f15b9df74648aabdb"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_msvccompiler",
+      "version": "0.0.0-1de2ee748240",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_msvccompiler@0.0.0-1de2ee748240#/.venv/Lib/site-packages/setuptools/_distutils/_msvccompiler.py",
+      "purl": "pkg:generic/setuptools/_msvccompiler@0.0.0-1de2ee748240#/.venv/Lib/site-packages/setuptools/_distutils/_msvccompiler.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "1de2ee748240c44ba30eec7008ec50fb"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "ccompiler",
+      "version": "0.0.0-01f549a277e4",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/ccompiler@0.0.0-01f549a277e4#/.venv/Lib/site-packages/setuptools/_distutils/ccompiler.py",
+      "purl": "pkg:generic/setuptools/ccompiler@0.0.0-01f549a277e4#/.venv/Lib/site-packages/setuptools/_distutils/ccompiler.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "01f549a277e4bce46fd6947f35caa723"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__init__",
+      "version": "0.0.0-71032a9d8fab",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__init__@0.0.0-71032a9d8fab#/.venv/Lib/site-packages/setuptools/_distutils/command/__init__.py",
+      "purl": "pkg:generic/setuptools/__init__@0.0.0-71032a9d8fab#/.venv/Lib/site-packages/setuptools/_distutils/command/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "71032a9d8fabe9e1353e40915d119aad"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "bdist",
+      "version": "0.0.0-c4df70031324",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/bdist@0.0.0-c4df70031324#/.venv/Lib/site-packages/setuptools/_distutils/command/bdist.py",
+      "purl": "pkg:generic/setuptools/bdist@0.0.0-c4df70031324#/.venv/Lib/site-packages/setuptools/_distutils/command/bdist.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c4df70031324e145e94c77245dfb48f7"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "build",
+      "version": "0.0.0-60fe366ed6f1",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/build@0.0.0-60fe366ed6f1#/.venv/Lib/site-packages/setuptools/_distutils/command/build.py",
+      "purl": "pkg:generic/setuptools/build@0.0.0-60fe366ed6f1#/.venv/Lib/site-packages/setuptools/_distutils/command/build.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "60fe366ed6f1e125e995af4329bab6a0"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "check",
+      "version": "0.0.0-fded167cbc4f",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/check@0.0.0-fded167cbc4f#/.venv/Lib/site-packages/setuptools/_distutils/command/check.py",
+      "purl": "pkg:generic/setuptools/check@0.0.0-fded167cbc4f#/.venv/Lib/site-packages/setuptools/_distutils/command/check.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "fded167cbc4fdc42dc903bb7794f602b"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "clean",
+      "version": "0.0.0-f7553a9910ef",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/clean@0.0.0-f7553a9910ef#/.venv/Lib/site-packages/setuptools/_distutils/command/clean.py",
+      "purl": "pkg:generic/setuptools/clean@0.0.0-f7553a9910ef#/.venv/Lib/site-packages/setuptools/_distutils/command/clean.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f7553a9910ef576ad9f6fcf5295fe856"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "install_headers",
+      "version": "0.0.0-2c6bc124b7d5",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/install_headers@0.0.0-2c6bc124b7d5#/.venv/Lib/site-packages/setuptools/_distutils/command/install_headers.py",
+      "purl": "pkg:generic/setuptools/install_headers@0.0.0-2c6bc124b7d5#/.venv/Lib/site-packages/setuptools/_distutils/command/install_headers.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2c6bc124b7d59487bf48af6b27265f91"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "install_scripts",
+      "version": "0.0.0-641276bbe05c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/install_scripts@0.0.0-641276bbe05c#/.venv/Lib/site-packages/setuptools/_distutils/command/install_scripts.py",
+      "purl": "pkg:generic/setuptools/install_scripts@0.0.0-641276bbe05c#/.venv/Lib/site-packages/setuptools/_distutils/command/install_scripts.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "641276bbe05c99e29d8b79caa51be368"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "numpy",
+      "version": "0.0.0-d902470b49f1",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/numpy@0.0.0-d902470b49f1#/.venv/Lib/site-packages/setuptools/_distutils/compat/numpy.py",
+      "purl": "pkg:generic/setuptools/numpy@0.0.0-d902470b49f1#/.venv/Lib/site-packages/setuptools/_distutils/compat/numpy.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d902470b49f1f52c1c22b971ebb55778"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py39",
+      "version": "0.0.0-7e337a48606a",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py39@0.0.0-7e337a48606a#/.venv/Lib/site-packages/setuptools/_distutils/compat/py39.py",
+      "purl": "pkg:generic/setuptools/py39@0.0.0-7e337a48606a#/.venv/Lib/site-packages/setuptools/_distutils/compat/py39.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7e337a48606a6db3db5ac50b19cdf790"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "errors",
+      "version": "0.0.0-d40cdfe16c64",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/errors@0.0.0-d40cdfe16c64#/.venv/Lib/site-packages/setuptools/_distutils/compilers/C/errors.py",
+      "purl": "pkg:generic/setuptools/errors@0.0.0-d40cdfe16c64#/.venv/Lib/site-packages/setuptools/_distutils/compilers/C/errors.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d40cdfe16c64dab5008fc7c0b4622446"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_mingw",
+      "version": "0.0.0-38c9182db849",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_mingw@0.0.0-38c9182db849#/.venv/Lib/site-packages/setuptools/_distutils/compilers/C/tests/test_mingw.py",
+      "purl": "pkg:generic/setuptools/test_mingw@0.0.0-38c9182db849#/.venv/Lib/site-packages/setuptools/_distutils/compilers/C/tests/test_mingw.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "38c9182db8493d14f3f4a44b75325e2d"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "zos",
+      "version": "0.0.0-ff65bef78a89",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/zos@0.0.0-ff65bef78a89#/.venv/Lib/site-packages/setuptools/_distutils/compilers/C/zos.py",
+      "purl": "pkg:generic/setuptools/zos@0.0.0-ff65bef78a89#/.venv/Lib/site-packages/setuptools/_distutils/compilers/C/zos.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ff65bef78a89710a3e125aeedaa8c093"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "cygwinccompiler",
+      "version": "0.0.0-bd6127a14b8c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/cygwinccompiler@0.0.0-bd6127a14b8c#/.venv/Lib/site-packages/setuptools/_distutils/cygwinccompiler.py",
+      "purl": "pkg:generic/setuptools/cygwinccompiler@0.0.0-bd6127a14b8c#/.venv/Lib/site-packages/setuptools/_distutils/cygwinccompiler.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bd6127a14b8cc26217cb5311b0d0575e"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "debug",
+      "version": "0.0.0-24b6b02e70e1",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/debug@0.0.0-24b6b02e70e1#/.venv/Lib/site-packages/setuptools/_distutils/debug.py",
+      "purl": "pkg:generic/setuptools/debug@0.0.0-24b6b02e70e1#/.venv/Lib/site-packages/setuptools/_distutils/debug.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "24b6b02e70e1ae0e8336128861a0a56a"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "dep_util",
+      "version": "0.0.0-52083be5a0e8",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/dep_util@0.0.0-52083be5a0e8#/.venv/Lib/site-packages/setuptools/_distutils/dep_util.py",
+      "purl": "pkg:generic/setuptools/dep_util@0.0.0-52083be5a0e8#/.venv/Lib/site-packages/setuptools/_distutils/dep_util.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "52083be5a0e87bb65b60943995d9ca24"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "errors",
+      "version": "0.0.0-928c26b90fe0",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/errors@0.0.0-928c26b90fe0#/.venv/Lib/site-packages/setuptools/_distutils/errors.py",
+      "purl": "pkg:generic/setuptools/errors@0.0.0-928c26b90fe0#/.venv/Lib/site-packages/setuptools/_distutils/errors.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "928c26b90fe0ec64fcc6234710c953c9"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "log",
+      "version": "0.0.0-33acee3c5f54",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/log@0.0.0-33acee3c5f54#/.venv/Lib/site-packages/setuptools/_distutils/log.py",
+      "purl": "pkg:generic/setuptools/log@0.0.0-33acee3c5f54#/.venv/Lib/site-packages/setuptools/_distutils/log.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "33acee3c5f54678d676f98f93461fa49"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__init__",
+      "version": "0.0.0-e33d3c9e5b0c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__init__@0.0.0-e33d3c9e5b0c#/.venv/Lib/site-packages/setuptools/_distutils/tests/__init__.py",
+      "purl": "pkg:generic/setuptools/__init__@0.0.0-e33d3c9e5b0c#/.venv/Lib/site-packages/setuptools/_distutils/tests/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e33d3c9e5b0cdabe86e3e205acf6b55b"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py39",
+      "version": "0.0.0-a662b1ae2228",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py39@0.0.0-a662b1ae2228#/.venv/Lib/site-packages/setuptools/_distutils/tests/compat/py39.py",
+      "purl": "pkg:generic/setuptools/py39@0.0.0-a662b1ae2228#/.venv/Lib/site-packages/setuptools/_distutils/tests/compat/py39.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a662b1ae22282fc96e15e6cb786f8c6c"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_bdist",
+      "version": "0.0.0-aa3a66699b0b",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_bdist@0.0.0-aa3a66699b0b#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_bdist.py",
+      "purl": "pkg:generic/setuptools/test_bdist@0.0.0-aa3a66699b0b#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_bdist.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "aa3a66699b0ba28f90728f2e2d917d7f"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_build",
+      "version": "0.0.0-074c35e6cc16",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_build@0.0.0-074c35e6cc16#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_build.py",
+      "purl": "pkg:generic/setuptools/test_build@0.0.0-074c35e6cc16#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_build.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "074c35e6cc16932d5c35d6f22602b24a"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_build_clib",
+      "version": "0.0.0-de8a9c42c8ab",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_build_clib@0.0.0-de8a9c42c8ab#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_build_clib.py",
+      "purl": "pkg:generic/setuptools/test_build_clib@0.0.0-de8a9c42c8ab#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_build_clib.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "de8a9c42c8ab3a303b95fff338d565dd"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_clean",
+      "version": "0.0.0-3f426682799d",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_clean@0.0.0-3f426682799d#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_clean.py",
+      "purl": "pkg:generic/setuptools/test_clean@0.0.0-3f426682799d#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_clean.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3f426682799dc1c07dcce71c8b1543dc"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_cmd",
+      "version": "0.0.0-520d75182220",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_cmd@0.0.0-520d75182220#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_cmd.py",
+      "purl": "pkg:generic/setuptools/test_cmd@0.0.0-520d75182220#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_cmd.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "520d7518222089bcbd04e35270ff5ab0"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_config_cmd",
+      "version": "0.0.0-8c8383d52338",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_config_cmd@0.0.0-8c8383d52338#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_config_cmd.py",
+      "purl": "pkg:generic/setuptools/test_config_cmd@0.0.0-8c8383d52338#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_config_cmd.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8c8383d523386eacafe2a53fec685018"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_extension",
+      "version": "0.0.0-33dc50b943a0",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_extension@0.0.0-33dc50b943a0#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_extension.py",
+      "purl": "pkg:generic/setuptools/test_extension@0.0.0-33dc50b943a0#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_extension.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "33dc50b943a0a3f0bbe00c39960b4c15"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_install_data",
+      "version": "0.0.0-be0f3cd7b702",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_install_data@0.0.0-be0f3cd7b702#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_data.py",
+      "purl": "pkg:generic/setuptools/test_install_data@0.0.0-be0f3cd7b702#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_data.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "be0f3cd7b70216ab16291a19df1af33e"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_install_headers",
+      "version": "0.0.0-04b9c176679a",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_install_headers@0.0.0-04b9c176679a#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_headers.py",
+      "purl": "pkg:generic/setuptools/test_install_headers@0.0.0-04b9c176679a#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_headers.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "04b9c176679a418f87832e21d6a2707d"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_install_lib",
+      "version": "0.0.0-14254d9ef935",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_install_lib@0.0.0-14254d9ef935#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_lib.py",
+      "purl": "pkg:generic/setuptools/test_install_lib@0.0.0-14254d9ef935#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_lib.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "14254d9ef93507ffb8f884a3fb37637f"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_install_scripts",
+      "version": "0.0.0-217baa416ed6",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_install_scripts@0.0.0-217baa416ed6#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_scripts.py",
+      "purl": "pkg:generic/setuptools/test_install_scripts@0.0.0-217baa416ed6#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_install_scripts.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "217baa416ed6ae51e05d5a2f5b816ec5"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_log",
+      "version": "0.0.0-079885d616a4",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_log@0.0.0-079885d616a4#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_log.py",
+      "purl": "pkg:generic/setuptools/test_log@0.0.0-079885d616a4#/.venv/Lib/site-packages/setuptools/_distutils/tests/test_log.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "079885d616a46d82c41b53d13d900571"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "unix_compat",
+      "version": "0.0.0-7187581296c5",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/unix_compat@0.0.0-7187581296c5#/.venv/Lib/site-packages/setuptools/_distutils/tests/unix_compat.py",
+      "purl": "pkg:generic/setuptools/unix_compat@0.0.0-7187581296c5#/.venv/Lib/site-packages/setuptools/_distutils/tests/unix_compat.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7187581296c51955ad9fae329b5bb626"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "text_file",
+      "version": "0.0.0-778845eb4f58",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/text_file@0.0.0-778845eb4f58#/.venv/Lib/site-packages/setuptools/_distutils/text_file.py",
+      "purl": "pkg:generic/setuptools/text_file@0.0.0-778845eb4f58#/.venv/Lib/site-packages/setuptools/_distutils/text_file.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "778845eb4f582e1b1b37df19a819b799"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "unixccompiler",
+      "version": "0.0.0-e210d8f5ae7d",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/unixccompiler@0.0.0-e210d8f5ae7d#/.venv/Lib/site-packages/setuptools/_distutils/unixccompiler.py",
+      "purl": "pkg:generic/setuptools/unixccompiler@0.0.0-e210d8f5ae7d#/.venv/Lib/site-packages/setuptools/_distutils/unixccompiler.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e210d8f5ae7d8e6815dda47baa7c652c"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "zosccompiler",
+      "version": "0.0.0-85860a291324",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/zosccompiler@0.0.0-85860a291324#/.venv/Lib/site-packages/setuptools/_distutils/zosccompiler.py",
+      "purl": "pkg:generic/setuptools/zosccompiler@0.0.0-85860a291324#/.venv/Lib/site-packages/setuptools/_distutils/zosccompiler.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "85860a291324096aeeeff0ab1ccd5109"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_importlib",
+      "version": "0.0.0-81f1792888e4",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_importlib@0.0.0-81f1792888e4#/.venv/Lib/site-packages/setuptools/_importlib.py",
+      "purl": "pkg:generic/setuptools/_importlib@0.0.0-81f1792888e4#/.venv/Lib/site-packages/setuptools/_importlib.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "81f1792888e4fb6e1bfa9316dd7d6ab3"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_itertools",
+      "version": "0.0.0-1fba77e8513b",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_itertools@0.0.0-1fba77e8513b#/.venv/Lib/site-packages/setuptools/_itertools.py",
+      "purl": "pkg:generic/setuptools/_itertools@0.0.0-1fba77e8513b#/.venv/Lib/site-packages/setuptools/_itertools.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "1fba77e8513bb3e114158b9760ee44ed"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_path",
+      "version": "0.0.0-da2325c4504a",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_path@0.0.0-da2325c4504a#/.venv/Lib/site-packages/setuptools/_path.py",
+      "purl": "pkg:generic/setuptools/_path@0.0.0-da2325c4504a#/.venv/Lib/site-packages/setuptools/_path.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "da2325c4504a58eaba0f8c0bbc1e52a8"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_reqs",
+      "version": "0.0.0-aa11f273b2b2",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_reqs@0.0.0-aa11f273b2b2#/.venv/Lib/site-packages/setuptools/_reqs.py",
+      "purl": "pkg:generic/setuptools/_reqs@0.0.0-aa11f273b2b2#/.venv/Lib/site-packages/setuptools/_reqs.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "aa11f273b2b23697deebfa1e909afb36"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_shutil",
+      "version": "0.0.0-38076006c192",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_shutil@0.0.0-38076006c192#/.venv/Lib/site-packages/setuptools/_shutil.py",
+      "purl": "pkg:generic/setuptools/_shutil@0.0.0-38076006c192#/.venv/Lib/site-packages/setuptools/_shutil.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "38076006c192e8bd226809f25dbce8e2"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__init__",
+      "version": "0.0.0-0db6fe979c8c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__init__@0.0.0-0db6fe979c8c#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/__init__.py",
+      "purl": "pkg:generic/setuptools/__init__@0.0.0-0db6fe979c8c#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0db6fe979c8cd7874d0e9bf11ad63294"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "autocommand",
+      "version": "0.0.0-5491fa20e992",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/autocommand@0.0.0-5491fa20e992#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/autocommand.py",
+      "purl": "pkg:generic/setuptools/autocommand@0.0.0-5491fa20e992#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/autocommand.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5491fa20e992af22c638c803d8c68d03"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "automain",
+      "version": "0.0.0-e40b059f2a2d",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/automain@0.0.0-e40b059f2a2d#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/automain.py",
+      "purl": "pkg:generic/setuptools/automain@0.0.0-e40b059f2a2d#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/automain.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e40b059f2a2db058ce7cf31d138d4065"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "errors",
+      "version": "0.0.0-a2844cafab73",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/errors@0.0.0-a2844cafab73#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/errors.py",
+      "purl": "pkg:generic/setuptools/errors@0.0.0-a2844cafab73#/.venv/Lib/site-packages/setuptools/_vendor/autocommand/errors.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a2844cafab73801b4ef9ae394fb9ac46"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__init__",
+      "version": "0.0.0-d60ee7e13c05",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__init__@0.0.0-d60ee7e13c05#/.venv/Lib/site-packages/setuptools/_vendor/backports/__init__.py",
+      "purl": "pkg:generic/setuptools/__init__@0.0.0-d60ee7e13c05#/.venv/Lib/site-packages/setuptools/_vendor/backports/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d60ee7e13c0581c091db4d3558c1eb0d"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__main__",
+      "version": "0.0.0-29c787a5d4a7",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__main__@0.0.0-29c787a5d4a7#/.venv/Lib/site-packages/setuptools/_vendor/backports/tarfile/__main__.py",
+      "purl": "pkg:generic/setuptools/__main__@0.0.0-29c787a5d4a7#/.venv/Lib/site-packages/setuptools/_vendor/backports/tarfile/__main__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "29c787a5d4a71c6d99bcfbd1d39b321e"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py38",
+      "version": "0.0.0-341deef48ca2",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py38@0.0.0-341deef48ca2#/.venv/Lib/site-packages/setuptools/_vendor/backports/tarfile/compat/py38.py",
+      "purl": "pkg:generic/setuptools/py38@0.0.0-341deef48ca2#/.venv/Lib/site-packages/setuptools/_vendor/backports/tarfile/compat/py38.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "341deef48ca2284e2a06abc4b647dfc2"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "_text",
+      "version": "0.0.0-23613a131c36",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/_text@0.0.0-23613a131c36#/.venv/Lib/site-packages/setuptools/_vendor/importlib_metadata/_text.py",
+      "purl": "pkg:generic/setuptools/_text@0.0.0-23613a131c36#/.venv/Lib/site-packages/setuptools/_vendor/importlib_metadata/_text.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "23613a131c369314c9f8c2579328e0bb"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py311",
+      "version": "0.0.0-58dae17ebfe5",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py311@0.0.0-58dae17ebfe5#/.venv/Lib/site-packages/setuptools/_vendor/importlib_metadata/compat/py311.py",
+      "purl": "pkg:generic/setuptools/py311@0.0.0-58dae17ebfe5#/.venv/Lib/site-packages/setuptools/_vendor/importlib_metadata/compat/py311.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "58dae17ebfe579dbb5e2ca7fccb0ade7"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "show-newlines",
+      "version": "0.0.0-211a93c2d3c9",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/show-newlines@0.0.0-211a93c2d3c9#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/show-newlines.py",
+      "purl": "pkg:generic/setuptools/show-newlines@0.0.0-211a93c2d3c9#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/show-newlines.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "211a93c2d3c9e04276dbe261a7c6e628"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "strip-prefix",
+      "version": "0.0.0-a33faffe1b39",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/strip-prefix@0.0.0-a33faffe1b39#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/strip-prefix.py",
+      "purl": "pkg:generic/setuptools/strip-prefix@0.0.0-a33faffe1b39#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/strip-prefix.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a33faffe1b392b7520a37a6a8d0a2da9"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "to-dvorak",
+      "version": "0.0.0-88e531610512",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/to-dvorak@0.0.0-88e531610512#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/to-dvorak.py",
+      "purl": "pkg:generic/setuptools/to-dvorak@0.0.0-88e531610512#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/to-dvorak.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "88e5316105120914384abba19e70db54"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "to-qwerty",
+      "version": "0.0.0-cb709dfa95bf",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/to-qwerty@0.0.0-cb709dfa95bf#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/to-qwerty.py",
+      "purl": "pkg:generic/setuptools/to-qwerty@0.0.0-cb709dfa95bf#/.venv/Lib/site-packages/setuptools/_vendor/jaraco/text/to-qwerty.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "cb709dfa95bf7a0a5cd09be9777543ed"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__main__",
+      "version": "0.0.0-05fe04d0151d",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__main__@0.0.0-05fe04d0151d#/.venv/Lib/site-packages/setuptools/_vendor/platformdirs/__main__.py",
+      "purl": "pkg:generic/setuptools/__main__@0.0.0-05fe04d0151d#/.venv/Lib/site-packages/setuptools/_vendor/platformdirs/__main__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "05fe04d0151d64235c83bad6a399be7c"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "alias",
+      "version": "0.0.0-e06b7ca971a4",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/alias@0.0.0-e06b7ca971a4#/.venv/Lib/site-packages/setuptools/command/alias.py",
+      "purl": "pkg:generic/setuptools/alias@0.0.0-e06b7ca971a4#/.venv/Lib/site-packages/setuptools/command/alias.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e06b7ca971a454d0dcb52643a70d897f"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "build",
+      "version": "0.0.0-661d22bbee8d",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/build@0.0.0-661d22bbee8d#/.venv/Lib/site-packages/setuptools/command/build.py",
+      "purl": "pkg:generic/setuptools/build@0.0.0-661d22bbee8d#/.venv/Lib/site-packages/setuptools/command/build.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "661d22bbee8d6f3eb6ea12aa4f41c828"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "build_clib",
+      "version": "0.0.0-8802d41428b7",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/build_clib@0.0.0-8802d41428b7#/.venv/Lib/site-packages/setuptools/command/build_clib.py",
+      "purl": "pkg:generic/setuptools/build_clib@0.0.0-8802d41428b7#/.venv/Lib/site-packages/setuptools/command/build_clib.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8802d41428b7fd2afd196e039916baaf"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "easy_install",
+      "version": "0.0.0-3c67480b02ad",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/easy_install@0.0.0-3c67480b02ad#/.venv/Lib/site-packages/setuptools/command/easy_install.py",
+      "purl": "pkg:generic/setuptools/easy_install@0.0.0-3c67480b02ad#/.venv/Lib/site-packages/setuptools/command/easy_install.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3c67480b02ade0a00a75f305a1675dbc"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "install_scripts",
+      "version": "0.0.0-b5230ff60b78",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/install_scripts@0.0.0-b5230ff60b78#/.venv/Lib/site-packages/setuptools/command/install_scripts.py",
+      "purl": "pkg:generic/setuptools/install_scripts@0.0.0-b5230ff60b78#/.venv/Lib/site-packages/setuptools/command/install_scripts.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b5230ff60b785e61f2d7bb0410a046a6"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "rotate",
+      "version": "0.0.0-7361a3a623b8",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/rotate@0.0.0-7361a3a623b8#/.venv/Lib/site-packages/setuptools/command/rotate.py",
+      "purl": "pkg:generic/setuptools/rotate@0.0.0-7361a3a623b8#/.venv/Lib/site-packages/setuptools/command/rotate.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7361a3a623b84b16b30cf3495fdb02ba"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "saveopts",
+      "version": "0.0.0-86db1aa25605",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/saveopts@0.0.0-86db1aa25605#/.venv/Lib/site-packages/setuptools/command/saveopts.py",
+      "purl": "pkg:generic/setuptools/saveopts@0.0.0-86db1aa25605#/.venv/Lib/site-packages/setuptools/command/saveopts.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "86db1aa25605dd57357d8612ce0ee296"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py310",
+      "version": "0.0.0-a10162933812",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py310@0.0.0-a10162933812#/.venv/Lib/site-packages/setuptools/compat/py310.py",
+      "purl": "pkg:generic/setuptools/py310@0.0.0-a10162933812#/.venv/Lib/site-packages/setuptools/compat/py310.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a10162933812977013a7aec3b0078f6e"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py312",
+      "version": "0.0.0-64834e192e84",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py312@0.0.0-64834e192e84#/.venv/Lib/site-packages/setuptools/compat/py312.py",
+      "purl": "pkg:generic/setuptools/py312@0.0.0-64834e192e84#/.venv/Lib/site-packages/setuptools/compat/py312.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "64834e192e843c248ca0877e75281cc9"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py39",
+      "version": "0.0.0-fc329621f4b9",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py39@0.0.0-fc329621f4b9#/.venv/Lib/site-packages/setuptools/compat/py39.py",
+      "purl": "pkg:generic/setuptools/py39@0.0.0-fc329621f4b9#/.venv/Lib/site-packages/setuptools/compat/py39.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "fc329621f4b91b1be276ab8a26596bbe"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "fastjsonschema_exceptions",
+      "version": "0.0.0-eeb0109c0e11",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/fastjsonschema_exceptions@0.0.0-eeb0109c0e11#/.venv/Lib/site-packages/setuptools/config/_validate_pyproject/fastjsonschema_exceptions.py",
+      "purl": "pkg:generic/setuptools/fastjsonschema_exceptions@0.0.0-eeb0109c0e11#/.venv/Lib/site-packages/setuptools/config/_validate_pyproject/fastjsonschema_exceptions.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "eeb0109c0e113485a2e2f04ccd73330c"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "errors",
+      "version": "0.0.0-93da5a3eb82c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/errors@0.0.0-93da5a3eb82c#/.venv/Lib/site-packages/setuptools/errors.py",
+      "purl": "pkg:generic/setuptools/errors@0.0.0-93da5a3eb82c#/.venv/Lib/site-packages/setuptools/errors.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "93da5a3eb82cc5b8bce8c93a9cf9639e"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "launch",
+      "version": "0.0.0-7e3d4a097c73",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/launch@0.0.0-7e3d4a097c73#/.venv/Lib/site-packages/setuptools/launch.py",
+      "purl": "pkg:generic/setuptools/launch@0.0.0-7e3d4a097c73#/.venv/Lib/site-packages/setuptools/launch.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7e3d4a097c7324bd9b3b5a81caf3da11"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "modified",
+      "version": "0.0.0-5d0d7b1312c6",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/modified@0.0.0-5d0d7b1312c6#/.venv/Lib/site-packages/setuptools/modified.py",
+      "purl": "pkg:generic/setuptools/modified@0.0.0-5d0d7b1312c6#/.venv/Lib/site-packages/setuptools/modified.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5d0d7b1312c6b9ae69784d3068f5dbd2"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "__init__",
+      "version": "0.0.0-48f7fc95832c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/__init__@0.0.0-48f7fc95832c#/.venv/Lib/site-packages/setuptools/tests/__init__.py",
+      "purl": "pkg:generic/setuptools/__init__@0.0.0-48f7fc95832c#/.venv/Lib/site-packages/setuptools/tests/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "48f7fc95832cfcf05a61470f27ff0205"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "py39",
+      "version": "0.0.0-eba96f5f9c41",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/py39@0.0.0-eba96f5f9c41#/.venv/Lib/site-packages/setuptools/tests/compat/py39.py",
+      "purl": "pkg:generic/setuptools/py39@0.0.0-eba96f5f9c41#/.venv/Lib/site-packages/setuptools/tests/compat/py39.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "eba96f5f9c4129331a2c217bf1951ee3"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "preload",
+      "version": "0.0.0-236a3aaf2025",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/preload@0.0.0-236a3aaf2025#/.venv/Lib/site-packages/setuptools/tests/config/downloads/preload.py",
+      "purl": "pkg:generic/setuptools/preload@0.0.0-236a3aaf2025#/.venv/Lib/site-packages/setuptools/tests/config/downloads/preload.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "236a3aaf20254b1bb22d01a47314fcf8"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_pbr",
+      "version": "0.0.0-a2aa3c8854f2",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_pbr@0.0.0-a2aa3c8854f2#/.venv/Lib/site-packages/setuptools/tests/integration/test_pbr.py",
+      "purl": "pkg:generic/setuptools/test_pbr@0.0.0-a2aa3c8854f2#/.venv/Lib/site-packages/setuptools/tests/integration/test_pbr.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a2aa3c8854f2a7d895596cbcc233356c"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "mod_with_constant",
+      "version": "0.0.0-dcc890226664",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/mod_with_constant@0.0.0-dcc890226664#/.venv/Lib/site-packages/setuptools/tests/mod_with_constant.py",
+      "purl": "pkg:generic/setuptools/mod_with_constant@0.0.0-dcc890226664#/.venv/Lib/site-packages/setuptools/tests/mod_with_constant.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "dcc89022666429423af1b5234851208f"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "script-with-bom",
+      "version": "0.0.0-dba08749eadf",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/script-with-bom@0.0.0-dba08749eadf#/.venv/Lib/site-packages/setuptools/tests/script-with-bom.py",
+      "purl": "pkg:generic/setuptools/script-with-bom@0.0.0-dba08749eadf#/.venv/Lib/site-packages/setuptools/tests/script-with-bom.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "dba08749eadf8fa594b27e51171a450d"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_archive_util",
+      "version": "0.0.0-da42ef8ffe9f",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_archive_util@0.0.0-da42ef8ffe9f#/.venv/Lib/site-packages/setuptools/tests/test_archive_util.py",
+      "purl": "pkg:generic/setuptools/test_archive_util@0.0.0-da42ef8ffe9f#/.venv/Lib/site-packages/setuptools/tests/test_archive_util.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "da42ef8ffe9fc150cd14d514a0dd9f6b"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_bdist_deprecations",
+      "version": "0.0.0-2a9cc0d32a1c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_bdist_deprecations@0.0.0-2a9cc0d32a1c#/.venv/Lib/site-packages/setuptools/tests/test_bdist_deprecations.py",
+      "purl": "pkg:generic/setuptools/test_bdist_deprecations@0.0.0-2a9cc0d32a1c#/.venv/Lib/site-packages/setuptools/tests/test_bdist_deprecations.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2a9cc0d32a1c9291effabd0bf69dcaed"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_build",
+      "version": "0.0.0-6746d2d472ce",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_build@0.0.0-6746d2d472ce#/.venv/Lib/site-packages/setuptools/tests/test_build.py",
+      "purl": "pkg:generic/setuptools/test_build@0.0.0-6746d2d472ce#/.venv/Lib/site-packages/setuptools/tests/test_build.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "6746d2d472ce4b347f5370d1cb002231"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_depends",
+      "version": "0.0.0-955f52aa95d7",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_depends@0.0.0-955f52aa95d7#/.venv/Lib/site-packages/setuptools/tests/test_depends.py",
+      "purl": "pkg:generic/setuptools/test_depends@0.0.0-955f52aa95d7#/.venv/Lib/site-packages/setuptools/tests/test_depends.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "955f52aa95d710590a230ee36368bb1e"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_extern",
+      "version": "0.0.0-5f72e6b700f5",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_extern@0.0.0-5f72e6b700f5#/.venv/Lib/site-packages/setuptools/tests/test_extern.py",
+      "purl": "pkg:generic/setuptools/test_extern@0.0.0-5f72e6b700f5#/.venv/Lib/site-packages/setuptools/tests/test_extern.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5f72e6b700f5ea7d11fbd80b844678e4"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_find_packages",
+      "version": "0.0.0-4feb8d42dfd5",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_find_packages@0.0.0-4feb8d42dfd5#/.venv/Lib/site-packages/setuptools/tests/test_find_packages.py",
+      "purl": "pkg:generic/setuptools/test_find_packages@0.0.0-4feb8d42dfd5#/.venv/Lib/site-packages/setuptools/tests/test_find_packages.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4feb8d42dfd51477494cadabe49b22ba"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_find_py_modules",
+      "version": "0.0.0-e53bbfdd82f3",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_find_py_modules@0.0.0-e53bbfdd82f3#/.venv/Lib/site-packages/setuptools/tests/test_find_py_modules.py",
+      "purl": "pkg:generic/setuptools/test_find_py_modules@0.0.0-e53bbfdd82f3#/.venv/Lib/site-packages/setuptools/tests/test_find_py_modules.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e53bbfdd82f3ea7178cf7e0ff88954f0"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_install_scripts",
+      "version": "0.0.0-9f21d749a3cc",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_install_scripts@0.0.0-9f21d749a3cc#/.venv/Lib/site-packages/setuptools/tests/test_install_scripts.py",
+      "purl": "pkg:generic/setuptools/test_install_scripts@0.0.0-9f21d749a3cc#/.venv/Lib/site-packages/setuptools/tests/test_install_scripts.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9f21d749a3cc05c22c2a39ac371a4d84"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_scripts",
+      "version": "0.0.0-e010b3627135",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_scripts@0.0.0-e010b3627135#/.venv/Lib/site-packages/setuptools/tests/test_scripts.py",
+      "purl": "pkg:generic/setuptools/test_scripts@0.0.0-e010b3627135#/.venv/Lib/site-packages/setuptools/tests/test_scripts.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e010b3627135bc37e6205b20f2ec05c8"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_setopt",
+      "version": "0.0.0-259f71c9b15c",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_setopt@0.0.0-259f71c9b15c#/.venv/Lib/site-packages/setuptools/tests/test_setopt.py",
+      "purl": "pkg:generic/setuptools/test_setopt@0.0.0-259f71c9b15c#/.venv/Lib/site-packages/setuptools/tests/test_setopt.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "259f71c9b15cf73d9ce8683b4b31c71a"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_shutil_wrapper",
+      "version": "0.0.0-74424640eea3",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_shutil_wrapper@0.0.0-74424640eea3#/.venv/Lib/site-packages/setuptools/tests/test_shutil_wrapper.py",
+      "purl": "pkg:generic/setuptools/test_shutil_wrapper@0.0.0-74424640eea3#/.venv/Lib/site-packages/setuptools/tests/test_shutil_wrapper.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "74424640eea3de071ccb14908eadb7dc"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_unicode_utils",
+      "version": "0.0.0-e6f9efdf1866",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_unicode_utils@0.0.0-e6f9efdf1866#/.venv/Lib/site-packages/setuptools/tests/test_unicode_utils.py",
+      "purl": "pkg:generic/setuptools/test_unicode_utils@0.0.0-e6f9efdf1866#/.venv/Lib/site-packages/setuptools/tests/test_unicode_utils.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e6f9efdf1866d773dfadf75b36168c25"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "test_virtualenv",
+      "version": "0.0.0-20aa6fdb78b2",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/test_virtualenv@0.0.0-20aa6fdb78b2#/.venv/Lib/site-packages/setuptools/tests/test_virtualenv.py",
+      "purl": "pkg:generic/setuptools/test_virtualenv@0.0.0-20aa6fdb78b2#/.venv/Lib/site-packages/setuptools/tests/test_virtualenv.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "20aa6fdb78b2dd492f602d3ca740954a"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "text",
+      "version": "0.0.0-9dc9f68da265",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/text@0.0.0-9dc9f68da265#/.venv/Lib/site-packages/setuptools/tests/text.py",
+      "purl": "pkg:generic/setuptools/text@0.0.0-9dc9f68da265#/.venv/Lib/site-packages/setuptools/tests/text.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9dc9f68da2655ce70bc9f0007afd2dc9"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "textwrap",
+      "version": "0.0.0-4008c7c0831a",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/textwrap@0.0.0-4008c7c0831a#/.venv/Lib/site-packages/setuptools/tests/textwrap.py",
+      "purl": "pkg:generic/setuptools/textwrap@0.0.0-4008c7c0831a#/.venv/Lib/site-packages/setuptools/tests/textwrap.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4008c7c0831ae4dd29e3beeb43042777"
+        }
+      ]
+    },
+    {
+      "group": "setuptools",
+      "name": "version",
+      "version": "0.0.0-1fae7f33aca0",
+      "type": "file",
+      "bom-ref": "pkg:generic/setuptools/version@0.0.0-1fae7f33aca0#/.venv/Lib/site-packages/setuptools/version.py",
+      "purl": "pkg:generic/setuptools/version@0.0.0-1fae7f33aca0#/.venv/Lib/site-packages/setuptools/version.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "1fae7f33aca04d019c43c7f9176672cd"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "__init__",
+      "version": "0.0.0-9b69bf820d66",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/__init__@0.0.0-9b69bf820d66#/.venv/Lib/site-packages/colorama/__init__.py",
+      "purl": "pkg:generic/colorama/__init__@0.0.0-9b69bf820d66#/.venv/Lib/site-packages/colorama/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9b69bf820d66b37c1b1b47ccd628be4a"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "ansi",
+      "version": "0.0.0-d2654f15ef15",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/ansi@0.0.0-d2654f15ef15#/.venv/Lib/site-packages/colorama/ansi.py",
+      "purl": "pkg:generic/colorama/ansi@0.0.0-d2654f15ef15#/.venv/Lib/site-packages/colorama/ansi.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d2654f15ef156fd42066197d0a3b7f3f"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "initialise",
+      "version": "0.0.0-32700ec5df70",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/initialise@0.0.0-32700ec5df70#/.venv/Lib/site-packages/colorama/initialise.py",
+      "purl": "pkg:generic/colorama/initialise@0.0.0-32700ec5df70#/.venv/Lib/site-packages/colorama/initialise.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "32700ec5df703a8a4723df5de8030195"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "ansi_test",
+      "version": "0.0.0-a1ea93050aa2",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/ansi_test@0.0.0-a1ea93050aa2#/.venv/Lib/site-packages/colorama/tests/ansi_test.py",
+      "purl": "pkg:generic/colorama/ansi_test@0.0.0-a1ea93050aa2#/.venv/Lib/site-packages/colorama/tests/ansi_test.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a1ea93050aa22a083cd48a1e3b22a4e1"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "initialise_test",
+      "version": "0.0.0-7cead9520246",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/initialise_test@0.0.0-7cead9520246#/.venv/Lib/site-packages/colorama/tests/initialise_test.py",
+      "purl": "pkg:generic/colorama/initialise_test@0.0.0-7cead9520246#/.venv/Lib/site-packages/colorama/tests/initialise_test.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7cead95202463b7756fdfdac2e10acdc"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "isatty_test",
+      "version": "0.0.0-8a90a316475e",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/isatty_test@0.0.0-8a90a316475e#/.venv/Lib/site-packages/colorama/tests/isatty_test.py",
+      "purl": "pkg:generic/colorama/isatty_test@0.0.0-8a90a316475e#/.venv/Lib/site-packages/colorama/tests/isatty_test.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8a90a316475eefbf8b84c64c115458dc"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "utils",
+      "version": "0.0.0-185214f43c18",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/utils@0.0.0-185214f43c18#/.venv/Lib/site-packages/colorama/tests/utils.py",
+      "purl": "pkg:generic/colorama/utils@0.0.0-185214f43c18#/.venv/Lib/site-packages/colorama/tests/utils.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "185214f43c18b7dfce9b42b6b45da4fb"
+        }
+      ]
+    },
+    {
+      "group": "colorama",
+      "name": "winterm_test",
+      "version": "0.0.0-4941b0877ec2",
+      "type": "file",
+      "bom-ref": "pkg:generic/colorama/winterm_test@0.0.0-4941b0877ec2#/.venv/Lib/site-packages/colorama/tests/winterm_test.py",
+      "purl": "pkg:generic/colorama/winterm_test@0.0.0-4941b0877ec2#/.venv/Lib/site-packages/colorama/tests/winterm_test.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4941b0877ec28d25ed027160d9f6820d"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "__main__",
+      "version": "0.0.0-7eda59d19870",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/__main__@0.0.0-7eda59d19870#/.venv/Lib/site-packages/tqdm/__main__.py",
+      "purl": "pkg:generic/tqdm/__main__@0.0.0-7eda59d19870#/.venv/Lib/site-packages/tqdm/__main__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7eda59d198700d4763281d2a048a155d"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "_tqdm_pandas",
+      "version": "0.0.0-2b37d3f9dd4e",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/_tqdm_pandas@0.0.0-2b37d3f9dd4e#/.venv/Lib/site-packages/tqdm/_tqdm_pandas.py",
+      "purl": "pkg:generic/tqdm/_tqdm_pandas@0.0.0-2b37d3f9dd4e#/.venv/Lib/site-packages/tqdm/_tqdm_pandas.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2b37d3f9dd4e217357227834a14748ec"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "auto",
+      "version": "0.0.0-a911620c0697",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/auto@0.0.0-a911620c0697#/.venv/Lib/site-packages/tqdm/auto.py",
+      "purl": "pkg:generic/tqdm/auto@0.0.0-a911620c0697#/.venv/Lib/site-packages/tqdm/auto.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a911620c069748a826a9005e08e7f4c2"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "autonotebook",
+      "version": "0.0.0-6649dce8f638",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/autonotebook@0.0.0-6649dce8f638#/.venv/Lib/site-packages/tqdm/autonotebook.py",
+      "purl": "pkg:generic/tqdm/autonotebook@0.0.0-6649dce8f638#/.venv/Lib/site-packages/tqdm/autonotebook.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "6649dce8f638e5bdb0a246f864b5e1f1"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "__init__",
+      "version": "0.0.0-11ce2024d6a9",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/__init__@0.0.0-11ce2024d6a9#/.venv/Lib/site-packages/tqdm/contrib/__init__.py",
+      "purl": "pkg:generic/tqdm/__init__@0.0.0-11ce2024d6a9#/.venv/Lib/site-packages/tqdm/contrib/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "11ce2024d6a925ad5e3a1adb28fc7a09"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "bells",
+      "version": "0.0.0-c695aee284f3",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/bells@0.0.0-c695aee284f3#/.venv/Lib/site-packages/tqdm/contrib/bells.py",
+      "purl": "pkg:generic/tqdm/bells@0.0.0-c695aee284f3#/.venv/Lib/site-packages/tqdm/contrib/bells.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c695aee284f3e784fe68f73d33945479"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "concurrent",
+      "version": "0.0.0-7109f6497041",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/concurrent@0.0.0-7109f6497041#/.venv/Lib/site-packages/tqdm/contrib/concurrent.py",
+      "purl": "pkg:generic/tqdm/concurrent@0.0.0-7109f6497041#/.venv/Lib/site-packages/tqdm/contrib/concurrent.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7109f6497041662b9eff79271f1b7edd"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "itertools",
+      "version": "0.0.0-e8498dab5ede",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/itertools@0.0.0-e8498dab5ede#/.venv/Lib/site-packages/tqdm/contrib/itertools.py",
+      "purl": "pkg:generic/tqdm/itertools@0.0.0-e8498dab5ede#/.venv/Lib/site-packages/tqdm/contrib/itertools.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e8498dab5edeb07a218b32b8d0af8652"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "logging",
+      "version": "0.0.0-0a7f8d857f9f",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/logging@0.0.0-0a7f8d857f9f#/.venv/Lib/site-packages/tqdm/contrib/logging.py",
+      "purl": "pkg:generic/tqdm/logging@0.0.0-0a7f8d857f9f#/.venv/Lib/site-packages/tqdm/contrib/logging.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0a7f8d857f9f8421c74d88d485773880"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "slack",
+      "version": "0.0.0-06aec0183014",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/slack@0.0.0-06aec0183014#/.venv/Lib/site-packages/tqdm/contrib/slack.py",
+      "purl": "pkg:generic/tqdm/slack@0.0.0-06aec0183014#/.venv/Lib/site-packages/tqdm/contrib/slack.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "06aec01830147dab45c4d4e7f460371b"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "utils_worker",
+      "version": "0.0.0-71356cf4d71b",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/utils_worker@0.0.0-71356cf4d71b#/.venv/Lib/site-packages/tqdm/contrib/utils_worker.py",
+      "purl": "pkg:generic/tqdm/utils_worker@0.0.0-71356cf4d71b#/.venv/Lib/site-packages/tqdm/contrib/utils_worker.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "71356cf4d71b99b9ecff04e639f5e610"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "keras",
+      "version": "0.0.0-5910fc18a9bd",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/keras@0.0.0-5910fc18a9bd#/.venv/Lib/site-packages/tqdm/keras.py",
+      "purl": "pkg:generic/tqdm/keras@0.0.0-5910fc18a9bd#/.venv/Lib/site-packages/tqdm/keras.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5910fc18a9bd3918ec19cc2fe592a7d5"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "rich",
+      "version": "0.0.0-b60b7f40db27",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/rich@0.0.0-b60b7f40db27#/.venv/Lib/site-packages/tqdm/rich.py",
+      "purl": "pkg:generic/tqdm/rich@0.0.0-b60b7f40db27#/.venv/Lib/site-packages/tqdm/rich.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b60b7f40db2748c7b139c59de9fd3334"
+        }
+      ]
+    },
+    {
+      "group": "tqdm",
+      "name": "version",
+      "version": "0.0.0-7d2ef4567d05",
+      "type": "file",
+      "bom-ref": "pkg:generic/tqdm/version@0.0.0-7d2ef4567d05#/.venv/Lib/site-packages/tqdm/version.py",
+      "purl": "pkg:generic/tqdm/version@0.0.0-7d2ef4567d05#/.venv/Lib/site-packages/tqdm/version.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7d2ef4567d05a9827e21986ffa996cc4"
+        }
+      ]
+    },
+    {
+      "group": "pyyaml",
+      "name": "__init__",
+      "version": "0.0.0-33f4a59deca2",
+      "type": "file",
+      "bom-ref": "pkg:generic/pyyaml/__init__@0.0.0-33f4a59deca2#/.venv/Lib/site-packages/_yaml/__init__.py",
+      "purl": "pkg:generic/pyyaml/__init__@0.0.0-33f4a59deca2#/.venv/Lib/site-packages/_yaml/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "33f4a59deca2ca35627c60d6deb8e071"
+        }
+      ]
+    },
+    {
+      "group": "pyyaml",
+      "name": "__init__",
+      "version": "0.0.0-1241dd96e812",
+      "type": "file",
+      "bom-ref": "pkg:generic/pyyaml/__init__@0.0.0-1241dd96e812#/.venv/Lib/site-packages/yaml/__init__.py",
+      "purl": "pkg:generic/pyyaml/__init__@0.0.0-1241dd96e812#/.venv/Lib/site-packages/yaml/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "1241dd96e8123fd7dec7717f214b0121"
+        }
+      ]
+    },
+    {
+      "group": "pyyaml",
+      "name": "composer",
+      "version": "0.0.0-15277c3bb851",
+      "type": "file",
+      "bom-ref": "pkg:generic/pyyaml/composer@0.0.0-15277c3bb851#/.venv/Lib/site-packages/yaml/composer.py",
+      "purl": "pkg:generic/pyyaml/composer@0.0.0-15277c3bb851#/.venv/Lib/site-packages/yaml/composer.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "15277c3bb851aa0e210e95a70545b275"
+        }
+      ]
+    },
+    {
+      "group": "pyyaml",
+      "name": "cyaml",
+      "version": "0.0.0-0cf004eba381",
+      "type": "file",
+      "bom-ref": "pkg:generic/pyyaml/cyaml@0.0.0-0cf004eba381#/.venv/Lib/site-packages/yaml/cyaml.py",
+      "purl": "pkg:generic/pyyaml/cyaml@0.0.0-0cf004eba381#/.venv/Lib/site-packages/yaml/cyaml.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0cf004eba3819bba0d78c59fca7a087f"
+        }
+      ]
+    },
+    {
+      "group": "pyyaml",
+      "name": "dumper",
+      "version": "0.0.0-8cc8d64c0f68",
+      "type": "file",
+      "bom-ref": "pkg:generic/pyyaml/dumper@0.0.0-8cc8d64c0f68#/.venv/Lib/site-packages/yaml/dumper.py",
+      "purl": "pkg:generic/pyyaml/dumper@0.0.0-8cc8d64c0f68#/.venv/Lib/site-packages/yaml/dumper.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8cc8d64c0f6859cd01279c4f99c43878"
+        }
+      ]
+    },
+    {
+      "group": "pyyaml",
+      "name": "loader",
+      "version": "0.0.0-96bebd194030",
+      "type": "file",
+      "bom-ref": "pkg:generic/pyyaml/loader@0.0.0-96bebd194030#/.venv/Lib/site-packages/yaml/loader.py",
+      "purl": "pkg:generic/pyyaml/loader@0.0.0-96bebd194030#/.venv/Lib/site-packages/yaml/loader.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "96bebd1940302c6efef9749346b66c3a"
+        }
+      ]
+    },
+    {
+      "group": "pyyaml",
+      "name": "nodes",
+      "version": "0.0.0-d234c3915d1b",
+      "type": "file",
+      "bom-ref": "pkg:generic/pyyaml/nodes@0.0.0-d234c3915d1b#/.venv/Lib/site-packages/yaml/nodes.py",
+      "purl": "pkg:generic/pyyaml/nodes@0.0.0-d234c3915d1b#/.venv/Lib/site-packages/yaml/nodes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d234c3915d1b9a0845b962d9b42d682d"
+        }
+      ]
+    },
+    {
+      "group": "python-certifi",
+      "name": "__main__",
+      "version": "0.0.0-9451f9f3b22d",
+      "type": "file",
+      "bom-ref": "pkg:generic/python-certifi/__main__@0.0.0-9451f9f3b22d#/.venv/Lib/site-packages/certifi/__main__.py",
+      "purl": "pkg:generic/python-certifi/__main__@0.0.0-9451f9f3b22d#/.venv/Lib/site-packages/certifi/__main__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9451f9f3b22de4d4adbfc9fc9a6691d5"
+        }
+      ]
+    },
+    {
+      "group": "python-certifi",
+      "name": "core",
+      "version": "0.0.0-5b9bdce5406d",
+      "type": "file",
+      "bom-ref": "pkg:generic/python-certifi/core@0.0.0-5b9bdce5406d#/.venv/Lib/site-packages/certifi/core.py",
+      "purl": "pkg:generic/python-certifi/core@0.0.0-5b9bdce5406d#/.venv/Lib/site-packages/certifi/core.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5b9bdce5406d81eef12a17e862e795e6"
+        }
+      ]
+    },
+    {
+      "group": "python-certifi",
+      "name": "__init__",
+      "version": "0.0.0-20d011488398",
+      "type": "file",
+      "bom-ref": "pkg:generic/python-certifi/__init__@0.0.0-20d011488398#/.venv/Lib/site-packages/pip/_vendor/certifi/__init__.py",
+      "purl": "pkg:generic/python-certifi/__init__@0.0.0-20d011488398#/.venv/Lib/site-packages/pip/_vendor/certifi/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "20d011488398ea1b8f6957ddc702c17a"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "__init__",
+      "version": "0.0.0-9c9640cd1da8",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/__init__@0.0.0-9c9640cd1da8#/.venv/Lib/site-packages/fsspec/__init__.py",
+      "purl": "pkg:generic/filesystem_spec/__init__@0.0.0-9c9640cd1da8#/.venv/Lib/site-packages/fsspec/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9c9640cd1da8bd8d8a1328217929612e"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "exceptions",
+      "version": "0.0.0-a138f41094bd",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/exceptions@0.0.0-a138f41094bd#/.venv/Lib/site-packages/fsspec/exceptions.py",
+      "purl": "pkg:generic/filesystem_spec/exceptions@0.0.0-a138f41094bd#/.venv/Lib/site-packages/fsspec/exceptions.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a138f41094bd910150667c37bc689536"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "cache_mapper",
+      "version": "0.0.0-0be25def57c9",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/cache_mapper@0.0.0-0be25def57c9#/.venv/Lib/site-packages/fsspec/implementations/cache_mapper.py",
+      "purl": "pkg:generic/filesystem_spec/cache_mapper@0.0.0-0be25def57c9#/.venv/Lib/site-packages/fsspec/implementations/cache_mapper.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0be25def57c9b3fff8abf13ce5306bf0"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "__init__",
+      "version": "0.0.0-9e97ba8e5632",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/__init__@0.0.0-9e97ba8e5632#/.venv/Lib/site-packages/fsspec/tests/abstract/__init__.py",
+      "purl": "pkg:generic/filesystem_spec/__init__@0.0.0-9e97ba8e5632#/.venv/Lib/site-packages/fsspec/tests/abstract/__init__.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9e97ba8e56327ad0a5baa6688c96dead"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "common",
+      "version": "0.0.0-59619f00b44c",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/common@0.0.0-59619f00b44c#/.venv/Lib/site-packages/fsspec/tests/abstract/common.py",
+      "purl": "pkg:generic/filesystem_spec/common@0.0.0-59619f00b44c#/.venv/Lib/site-packages/fsspec/tests/abstract/common.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "59619f00b44c6b1b42b4119904688fef"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "copy",
+      "version": "0.0.0-31061a633217",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/copy@0.0.0-31061a633217#/.venv/Lib/site-packages/fsspec/tests/abstract/copy.py",
+      "purl": "pkg:generic/filesystem_spec/copy@0.0.0-31061a633217#/.venv/Lib/site-packages/fsspec/tests/abstract/copy.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "31061a63321743e54af872a8b3afc03f"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "get",
+      "version": "0.0.0-8dbd5e4582a1",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/get@0.0.0-8dbd5e4582a1#/.venv/Lib/site-packages/fsspec/tests/abstract/get.py",
+      "purl": "pkg:generic/filesystem_spec/get@0.0.0-8dbd5e4582a1#/.venv/Lib/site-packages/fsspec/tests/abstract/get.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8dbd5e4582a19f63208252350d439c3e"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "mv",
+      "version": "0.0.0-827a2cf12234",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/mv@0.0.0-827a2cf12234#/.venv/Lib/site-packages/fsspec/tests/abstract/mv.py",
+      "purl": "pkg:generic/filesystem_spec/mv@0.0.0-827a2cf12234#/.venv/Lib/site-packages/fsspec/tests/abstract/mv.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "827a2cf12234b135cf728b023d635dc6"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "open",
+      "version": "0.0.0-4222e97021ba",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/open@0.0.0-4222e97021ba#/.venv/Lib/site-packages/fsspec/tests/abstract/open.py",
+      "purl": "pkg:generic/filesystem_spec/open@0.0.0-4222e97021ba#/.venv/Lib/site-packages/fsspec/tests/abstract/open.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4222e97021ba4de1b657bd5292ae00d7"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "pipe",
+      "version": "0.0.0-6d7dbc766d15",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/pipe@0.0.0-6d7dbc766d15#/.venv/Lib/site-packages/fsspec/tests/abstract/pipe.py",
+      "purl": "pkg:generic/filesystem_spec/pipe@0.0.0-6d7dbc766d15#/.venv/Lib/site-packages/fsspec/tests/abstract/pipe.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "6d7dbc766d151d4a5416c401a33b475d"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "put",
+      "version": "0.0.0-89a2d07ff988",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/put@0.0.0-89a2d07ff988#/.venv/Lib/site-packages/fsspec/tests/abstract/put.py",
+      "purl": "pkg:generic/filesystem_spec/put@0.0.0-89a2d07ff988#/.venv/Lib/site-packages/fsspec/tests/abstract/put.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "89a2d07ff9886c56d89b2d2717fbd4ee"
+        }
+      ]
+    },
+    {
+      "group": "filesystem_spec",
+      "name": "transaction",
+      "version": "0.0.0-1def77ae8b04",
+      "type": "file",
+      "bom-ref": "pkg:generic/filesystem_spec/transaction@0.0.0-1def77ae8b04#/.venv/Lib/site-packages/fsspec/transaction.py",
+      "purl": "pkg:generic/filesystem_spec/transaction@0.0.0-1def77ae8b04#/.venv/Lib/site-packages/fsspec/transaction.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "1def77ae8b04151303897301cdd0e232"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_cell_widths",
+      "version": "0.0.0-5118e77236fb",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_cell_widths@0.0.0-5118e77236fb#/.venv/Lib/site-packages/pip/_vendor/rich/_cell_widths.py",
+      "purl": "pkg:generic/rich/_cell_widths@0.0.0-5118e77236fb#/.venv/Lib/site-packages/pip/_vendor/rich/_cell_widths.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5118e77236fb2a767dc5d989cfdd5723"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_emoji_codes",
+      "version": "0.0.0-235e86e58bdf",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_emoji_codes@0.0.0-235e86e58bdf#/.venv/Lib/site-packages/pip/_vendor/rich/_emoji_codes.py",
+      "purl": "pkg:generic/rich/_emoji_codes@0.0.0-235e86e58bdf#/.venv/Lib/site-packages/pip/_vendor/rich/_emoji_codes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "235e86e58bdf07aee577f9003915c0e9"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_emoji_replace",
+      "version": "0.0.0-7d9aeeab1cd0",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_emoji_replace@0.0.0-7d9aeeab1cd0#/.venv/Lib/site-packages/pip/_vendor/rich/_emoji_replace.py",
+      "purl": "pkg:generic/rich/_emoji_replace@0.0.0-7d9aeeab1cd0#/.venv/Lib/site-packages/pip/_vendor/rich/_emoji_replace.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7d9aeeab1cd0184ba2692a8f7cf780d4"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_null_file",
+      "version": "0.0.0-2ac9ab487ce0",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_null_file@0.0.0-2ac9ab487ce0#/.venv/Lib/site-packages/pip/_vendor/rich/_null_file.py",
+      "purl": "pkg:generic/rich/_null_file@0.0.0-2ac9ab487ce0#/.venv/Lib/site-packages/pip/_vendor/rich/_null_file.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2ac9ab487ce037d65090115b0ba15019"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_palettes",
+      "version": "0.0.0-33c734f599a9",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_palettes@0.0.0-33c734f599a9#/.venv/Lib/site-packages/pip/_vendor/rich/_palettes.py",
+      "purl": "pkg:generic/rich/_palettes@0.0.0-33c734f599a9#/.venv/Lib/site-packages/pip/_vendor/rich/_palettes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "33c734f599a9eda1298205e4e825e1f9"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_pick",
+      "version": "0.0.0-714c4e71dbab",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_pick@0.0.0-714c4e71dbab#/.venv/Lib/site-packages/pip/_vendor/rich/_pick.py",
+      "purl": "pkg:generic/rich/_pick@0.0.0-714c4e71dbab#/.venv/Lib/site-packages/pip/_vendor/rich/_pick.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "714c4e71dbab4e95ed03e72b91b7784a"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_spinners",
+      "version": "0.0.0-0af83c5bec06",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_spinners@0.0.0-0af83c5bec06#/.venv/Lib/site-packages/pip/_vendor/rich/_spinners.py",
+      "purl": "pkg:generic/rich/_spinners@0.0.0-0af83c5bec06#/.venv/Lib/site-packages/pip/_vendor/rich/_spinners.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "0af83c5bec061522bec950b933743e0f"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_stack",
+      "version": "0.0.0-07154b6ee7ba",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_stack@0.0.0-07154b6ee7ba#/.venv/Lib/site-packages/pip/_vendor/rich/_stack.py",
+      "purl": "pkg:generic/rich/_stack@0.0.0-07154b6ee7ba#/.venv/Lib/site-packages/pip/_vendor/rich/_stack.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "07154b6ee7ba779c0b767f22e17bc2d1"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "_timer",
+      "version": "0.0.0-f6a182171cc1",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/_timer@0.0.0-f6a182171cc1#/.venv/Lib/site-packages/pip/_vendor/rich/_timer.py",
+      "purl": "pkg:generic/rich/_timer@0.0.0-f6a182171cc1#/.venv/Lib/site-packages/pip/_vendor/rich/_timer.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f6a182171cc18716cc8239a4ec723661"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "bar",
+      "version": "0.0.0-f5a2570e1000",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/bar@0.0.0-f5a2570e1000#/.venv/Lib/site-packages/pip/_vendor/rich/bar.py",
+      "purl": "pkg:generic/rich/bar@0.0.0-f5a2570e1000#/.venv/Lib/site-packages/pip/_vendor/rich/bar.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f5a2570e100009d6c9610a7ab148e52b"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "constrain",
+      "version": "0.0.0-33118abd06fc",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/constrain@0.0.0-33118abd06fc#/.venv/Lib/site-packages/pip/_vendor/rich/constrain.py",
+      "purl": "pkg:generic/rich/constrain@0.0.0-33118abd06fc#/.venv/Lib/site-packages/pip/_vendor/rich/constrain.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "33118abd06fcac101ad772ea0acadd86"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "errors",
+      "version": "0.0.0-054d7aa76ec6",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/errors@0.0.0-054d7aa76ec6#/.venv/Lib/site-packages/pip/_vendor/rich/errors.py",
+      "purl": "pkg:generic/rich/errors@0.0.0-054d7aa76ec6#/.venv/Lib/site-packages/pip/_vendor/rich/errors.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "054d7aa76ec6caa758a632d1d0656bd3"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "highlighter",
+      "version": "0.0.0-44b27a7b76d8",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/highlighter@0.0.0-44b27a7b76d8#/.venv/Lib/site-packages/pip/_vendor/rich/highlighter.py",
+      "purl": "pkg:generic/rich/highlighter@0.0.0-44b27a7b76d8#/.venv/Lib/site-packages/pip/_vendor/rich/highlighter.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "44b27a7b76d80ba232642e18a93f3b27"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "measure",
+      "version": "0.0.0-3e167acc2490",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/measure@0.0.0-3e167acc2490#/.venv/Lib/site-packages/pip/_vendor/rich/measure.py",
+      "purl": "pkg:generic/rich/measure@0.0.0-3e167acc2490#/.venv/Lib/site-packages/pip/_vendor/rich/measure.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3e167acc2490ddd25f50ad240a2e5760"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "pager",
+      "version": "0.0.0-d1b01c804e40",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/pager@0.0.0-d1b01c804e40#/.venv/Lib/site-packages/pip/_vendor/rich/pager.py",
+      "purl": "pkg:generic/rich/pager@0.0.0-d1b01c804e40#/.venv/Lib/site-packages/pip/_vendor/rich/pager.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d1b01c804e4057fa05e9b8807c985525"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "progress_bar",
+      "version": "0.0.0-db5f4349d938",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/progress_bar@0.0.0-db5f4349d938#/.venv/Lib/site-packages/pip/_vendor/rich/progress_bar.py",
+      "purl": "pkg:generic/rich/progress_bar@0.0.0-db5f4349d938#/.venv/Lib/site-packages/pip/_vendor/rich/progress_bar.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "db5f4349d938a37df498d5c07dcfe1b2"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "region",
+      "version": "0.0.0-88bb4e3a21cb",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/region@0.0.0-88bb4e3a21cb#/.venv/Lib/site-packages/pip/_vendor/rich/region.py",
+      "purl": "pkg:generic/rich/region@0.0.0-88bb4e3a21cb#/.venv/Lib/site-packages/pip/_vendor/rich/region.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "88bb4e3a21cbe8ae80cc58f172a95203"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "status",
+      "version": "0.0.0-4f3bdf5e34c5",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/status@0.0.0-4f3bdf5e34c5#/.venv/Lib/site-packages/pip/_vendor/rich/status.py",
+      "purl": "pkg:generic/rich/status@0.0.0-4f3bdf5e34c5#/.venv/Lib/site-packages/pip/_vendor/rich/status.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4f3bdf5e34c5695e8f3061e93f15bcfb"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "terminal_theme",
+      "version": "0.0.0-8dcd23093ffc",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/terminal_theme@0.0.0-8dcd23093ffc#/.venv/Lib/site-packages/pip/_vendor/rich/terminal_theme.py",
+      "purl": "pkg:generic/rich/terminal_theme@0.0.0-8dcd23093ffc#/.venv/Lib/site-packages/pip/_vendor/rich/terminal_theme.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8dcd23093ffc5716f5d9f8dfa0df5de2"
+        }
+      ]
+    },
+    {
+      "group": "rich",
+      "name": "themes",
+      "version": "0.0.0-ba6db765d89f",
+      "type": "file",
+      "bom-ref": "pkg:generic/rich/themes@0.0.0-ba6db765d89f#/.venv/Lib/site-packages/pip/_vendor/rich/themes.py",
+      "purl": "pkg:generic/rich/themes@0.0.0-ba6db765d89f#/.venv/Lib/site-packages/pip/_vendor/rich/themes.py",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ba6db765d89f5429176fc2e813fcfa76"
+        }
+      ]
+    }
+  ],
+  "file_count": 252
+}
