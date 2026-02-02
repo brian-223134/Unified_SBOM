@@ -1,8 +1,10 @@
 import os
 import json
-from typing import Any, Dict, Optional, Union
+from typing import Any, Dict, Optional, Union, List
 from app.models.hatbom_sbom import HatbomSbom
 from app.models.syft_sbom import SyftSbom
+import email.utils
+
 
 """
 parse.py
@@ -67,3 +69,33 @@ class SBOMParser:
         """임시 저장된 파싱 데이터를 반환합니다."""
         return self.parsed_data
 
+
+def parse_author_string(author_string: str) -> List[Dict[str, Optional[str]]]:
+    """
+    단일 또는 여러 명의 저자가 포함된 author 문자열을 파싱합니다.
+    
+    입력 예시:
+    - 단일: "Alex Grönholm <alex.gronholm@nextday.fi>"
+    - 여러명: "Filipe Laíns <lains@riseup.net>, Bernát Gábor <gaborjbernat@gmail.com>"
+    
+    반환: [{"name": "이름", "email": "이메일주소"}, ...]
+    """
+    if not author_string or not author_string.strip():
+        return []
+    
+    # email.utils.getaddresses()는 쉼표로 구분된 여러 주소를 파싱할 수 있음
+    # 리스트로 감싸서 전달해야 함
+    parsed_addresses = email.utils.getaddresses([author_string])
+    
+    authors = []
+    for name, email_addr in parsed_addresses:
+        # 이름과 이메일이 모두 비어있으면 건너뜀
+        if not name and not email_addr:
+            continue
+            
+        authors.append({
+            "name": name if name else None,
+            "email": email_addr if email_addr else None
+        })
+    
+    return authors
