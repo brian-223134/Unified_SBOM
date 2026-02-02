@@ -20,6 +20,7 @@ for comp in syft_sbom.components:
 - 기존의 components.author 필드의 경우 이름과 이메일 혹은 이름만 있는 경우가 있다. 이를 parsing해야 한다.
 - 아래는 python3에서 제공하는 email.utils 모듈을 활용한 예시이다.
 
+1. Parsing and Formatting a Single Email Address
 import email.utils
 import re
 
@@ -32,6 +33,20 @@ print(f"Email: {email_address}")
 # You can also format an address tuple back into a string:
 formatted_address = email.utils.formataddr((real_name, email_address))
 print(f"Formatted: {formatted_address}")
+
+---
+2. Extracting Email Address from a Block of Text
+import re
+
+text = "Contact us at support@example.com or sales-info@company.co.uk for details."
+
+# A common regex pattern for finding email addresses (can vary in complexity)
+# Note: A perfect regex for *all* valid emails is complex, but this handles most common cases
+regex_pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+
+found_emails = re.findall(regex_pattern, text)
+
+print("Found emails:", found_emails)
 '''
 
 from dataclasses import dataclass, field
