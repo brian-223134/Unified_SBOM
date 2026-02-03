@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
+    <title>통합 SBOM 결과</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden-row { display: none; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <div class="container mx-auto py-10 px-4">
+        <!-- 헤더 -->
+        <div class="mb-6 flex justify-between items-end">
+            <div>
+                <a href="/" class="text-indigo-600 hover:underline text-sm">← 메인으로 돌아가기</a>
+                <h1 class="text-3xl font-bold text-slate-800 mt-2">🔗 통합 SBOM 결과</h1>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="downloadJSON()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition flex items-center gap-2">
+                    <span>📥</span> JSON 다운로드
+                </button>
+            </div>
+        </div>
+
+        <!-- 요약 카드들 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">총 컴포넌트</p>
+                <p class="text-2xl font-bold text-indigo-600">{{ summary.total_components }}<span class="text-sm text-slate-400 font-normal ml-1">개</span></p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">Syft 출처</p>
+                <p class="text-2xl font-bold text-blue-600">{{ summary.components_from_syft }}<span class="text-sm text-slate-400 font-normal ml-1">개</span></p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">Hatbom 출처</p>
+                <p class="text-2xl font-bold text-green-600">{{ summary.components_from_hatbom }}<span class="text-sm text-slate-400 font-normal ml-1">개</span></p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">통합된 항목</p>
+                <p class="text-2xl font-bold text-purple-600">{{ summary.integrated_components }}<span class="text-sm text-slate-400 font-normal ml-1">개</span></p>
+            </div>
+        </div>
+
+        <!-- 메타데이터 정보 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+            <h2 class="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">📋 메타데이터</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="flex">
+                    <span class="text-slate-500 w-32">BOM Format:</span>
+                    <span class="font-medium text-slate-700">{{ summary.bom_format }}</span>
+                </div>
+                <div class="flex">
+                    <span class="text-slate-500 w-32">Spec Version:</span>
+                    <span class="font-medium text-slate-700">{{ summary.spec_version }}</span>
+                </div>
+                <div class="flex">
+                    <span class="text-slate-500 w-32">Timestamp:</span>
+                    <span class="font-medium text-slate-700 font-mono text-xs">{{ summary.timestamp }}</span>
+                </div>
+                <div class="flex">
+                    <span class="text-slate-500 w-32">Main Component:</span>
+                    <span class="font-medium text-slate-700">{{ summary.metadata_component or 'N/A' }}</span>
+                </div>
+                <div class="flex md:col-span-2">
+                    <span class="text-slate-500 w-32">Serial Number:</span>
+                    <span class="font-medium text-slate-700 font-mono text-xs break-all">{{ summary.serial_number }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 탭 네비게이션 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="flex border-b">
+                <button onclick="showTab('components')" id="tab-components" class="tab-btn px-6 py-3 font-semibold text-indigo-600 border-b-2 border-indigo-600 bg-indigo-50">
+                    📦 컴포넌트 ({{ summary.total_components }})
+                </button>
+                <button onclick="showTab('dependencies')" id="tab-dependencies" class="tab-btn px-6 py-3 font-semibold text-slate-500 hover:text-slate-700">
+                    🔗 의존성 ({{ summary.total_dependencies }})
+                </button>
+            </div>
+
+            <!-- 컴포넌트 탭 -->
+            <div id="content-components" class="tab-content active">
+                <div class="p-4 bg-slate-50 border-b flex justify-between items-center">
+                    <div class="flex gap-4">
+                        <label class="flex items-center gap-2 text-sm">
+                            <input type="checkbox" id="filter-syft" checked onchange="filterComponents()" class="rounded text-blue-600">
+                            <span class="text-blue-600 font-medium">Syft</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm">
+                            <input type="checkbox" id="filter-hatbom" checked onchange="filterComponents()" class="rounded text-green-600">
+                            <span class="text-green-600 font-medium">Hatbom</span>
+                        </label>
+                    </div>
+                    <input type="text" id="search-input" placeholder="검색..." onkeyup="filterComponents()" class="px-3 py-1 border rounded-lg text-sm w-48">
+                </div>
+                <table class="w-full text-left">
+                    <thead class="bg-slate-50 border-b">
+                        <tr>
+                            <th class="px-4 py-3 w-12">#</th>
+                            <th class="px-4 py-3">이름</th>
+                            <th class="px-4 py-3">버전</th>
+                            <th class="px-4 py-3">타입</th>
+                            <th class="px-4 py-3">라이선스</th>
+                            <th class="px-4 py-3">출처</th>
+                        </tr>
+                    </thead>
+                    <tbody id="components-table" class="divide-y divide-slate-100">
+                        {% for comp in components %}
+                        <tr class="hover:bg-slate-50 transition component-row {% if loop.index > 20 %}hidden-row{% endif %}" 
+                            data-source="{{ comp.source }}" data-name="{{ comp.name|lower }}">
+                            <td class="px-4 py-3 text-slate-400 text-sm">{{ loop.index }}</td>
+                            <td class="px-4 py-3">
+                                <div class="font-medium text-slate-800">{{ comp.name }}</div>
+                                {% if comp.authors %}
+                                <div class="text-xs text-slate-400 mt-1">
+                                    👤 {{ comp.authors }}
+                                </div>
+                                {% endif %}
+                            </td>
+                            <td class="px-4 py-3 font-mono text-sm text-slate-600">{{ comp.version }}</td>
+                            <td class="px-4 py-3">
+                                <span class="px-2 py-1 text-xs rounded-full 
+                                    {% if comp.type == 'library' %}bg-blue-100 text-blue-700
+                                    {% elif comp.type == 'file' %}bg-amber-100 text-amber-700
+                                    {% elif comp.type == 'application' %}bg-purple-100 text-purple-700
+                                    {% else %}bg-slate-100 text-slate-600{% endif %}">
+                                    {{ comp.type }}
+                                </span>
+                            </td>
+                            <td class="px-4 py-3">
+                                <span class="px-2 py-1 bg-slate-100 text-xs rounded border border-slate-200 text-slate-500">
+                                    {{ comp.license or 'N/A' }}
+                                </span>
+                            </td>
+                            <td class="px-4 py-3">
+                                {% if comp.source == 'Syft' %}
+                                <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded font-medium">Syft</span>
+                                {% elif comp.source == 'Hatbom' %}
+                                <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded font-medium">Hatbom</span>
+                                {% endif %}
+                                {% if comp.integrated %}
+                                <span class="ml-1 px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded font-medium">통합됨</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% if components|length > 20 %}
+                <div id="view-all-section" class="p-4 bg-slate-50 text-center border-t">
+                    <button onclick="showAllComponents()" class="bg-white border px-6 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-indigo-600 shadow-sm transition">
+                        전체 {{ components|length }} 개 컴포넌트 모두 보기 ↓
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- 의존성 탭 -->
+            <div id="content-dependencies" class="tab-content">
+                <table class="w-full text-left">
+                    <thead class="bg-slate-50 border-b">
+                        <tr>
+                            <th class="px-4 py-3 w-12">#</th>
+                            <th class="px-4 py-3">참조 (ref)</th>
+                            <th class="px-4 py-3">의존 항목 (dependsOn)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        {% for dep in dependencies %}
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="px-4 py-3 text-slate-400 text-sm">{{ loop.index }}</td>
+                            <td class="px-4 py-3 font-medium text-slate-800">{{ dep.ref }}</td>
+                            <td class="px-4 py-3 text-sm text-slate-600">
+                                {% if dep.dependsOn %}
+                                <div class="flex flex-wrap gap-1">
+                                    {% for d in dep.dependsOn[:5] %}
+                                    <span class="px-2 py-0.5 bg-slate-100 rounded text-xs">{{ d }}</span>
+                                    {% endfor %}
+                                    {% if dep.dependsOn|length > 5 %}
+                                    <span class="px-2 py-0.5 bg-indigo-100 text-indigo-600 rounded text-xs">+{{ dep.dependsOn|length - 5 }} more</span>
+                                    {% endif %}
+                                </div>
+                                {% else %}
+                                <span class="text-slate-400">없음</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- JSON 데이터 (다운로드용) -->
+    <script id="unified-sbom-data" type="application/json">{{ unified_sbom_json | safe }}</script>
+
+    <script>
+        function showTab(tabName) {
+            // 모든 탭 콘텐츠 숨기기
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('text-indigo-600', 'border-b-2', 'border-indigo-600', 'bg-indigo-50');
+                el.classList.add('text-slate-500');
+            });
+            
+            // 선택된 탭 표시
+            document.getElementById('content-' + tabName).classList.add('active');
+            const btn = document.getElementById('tab-' + tabName);
+            btn.classList.add('text-indigo-600', 'border-b-2', 'border-indigo-600', 'bg-indigo-50');
+            btn.classList.remove('text-slate-500');
+        }
+
+        function filterComponents() {
+            const showSyft = document.getElementById('filter-syft').checked;
+            const showHatbom = document.getElementById('filter-hatbom').checked;
+            const searchText = document.getElementById('search-input').value.toLowerCase();
+            
+            document.querySelectorAll('.component-row').forEach(row => {
+                const source = row.dataset.source;
+                const name = row.dataset.name;
+                
+                const sourceMatch = (source === 'Syft' && showSyft) || (source === 'Hatbom' && showHatbom);
+                const searchMatch = name.includes(searchText);
+                
+                if (sourceMatch && searchMatch) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        function showAllComponents() {
+            document.querySelectorAll('.hidden-row').forEach(row => row.classList.remove('hidden-row'));
+            document.getElementById('view-all-section').style.display = 'none';
+        }
+
+        function downloadJSON() {
+            const data = document.getElementById('unified-sbom-data').textContent;
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'unified_sbom.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
