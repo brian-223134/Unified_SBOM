@@ -98,8 +98,8 @@ class SBOMIntegrator:
         # 3. 결과 객체 구성
         self.unified_sbom.components = list(merged_map.values())
         
-        # 4. 의존성 정보 통합 (Hatbom의 dependencies 사용)
-        self._integrate_dependencies(hatbom)
+        # 4. 의존성 정보 통합 (Hatbom + Syft dependencies)
+        self._integrate_dependencies(hatbom, syft)
         
         print(f"[SUCCESS] 통합 완료: 총 {len(self.unified_sbom.components)} 개의 컴포넌트가 병합되었습니다.")
         return self.unified_sbom
@@ -158,16 +158,33 @@ class SBOMIntegrator:
             component=unified_meta_comp
         )
 
-    def _integrate_dependencies(self, hatbom: HatbomSbom):
+    def _integrate_dependencies(self, hatbom: HatbomSbom, syft: SyftSbom):
         """
-        의존성 정보를 통합합니다.
+        Hatbom과 Syft의 의존성 정보를 통합합니다.
         """
         dependencies = []
+        seen_refs = set()  # 중복 방지를 위한 집합
+        
+        # 1. Hatbom dependencies 추가
         for dep in hatbom.dependencies:
-            dependencies.append({
-                "ref": dep.ref,
-                "dependsOn": dep.depends_on
-            })
+            ref = dep.ref
+            if ref not in seen_refs:
+                dependencies.append({
+                    "ref": ref,
+                    "dependsOn": dep.depends_on
+                })
+                seen_refs.add(ref)
+        
+        # 2. Syft dependencies 추가
+        for dep in syft.dependencies:
+            ref = dep.get("ref", "")
+            if ref and ref not in seen_refs:
+                dependencies.append({
+                    "ref": ref,
+                    "dependsOn": dep.get("dependsOn", [])
+                })
+                seen_refs.add(ref)
+        
         self.unified_sbom.dependencies = dependencies
 
     def _generate_key(self, name: str, version: str, purl: str = None) -> str:
