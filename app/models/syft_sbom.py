@@ -161,6 +161,7 @@ class SyftSbom:
     version: int
     metadata: Metadata
     components: List[Component] = field(default_factory=list)
+    dependencies: List[Dict[str, Any]] = field(default_factory=list)
 
     @classmethod
     def from_json(cls, data: Dict[str, Any]):
@@ -209,5 +210,6 @@ class SyftSbom:
             serial_number=data.get('serialNumber'),
             version=data.get('version'),
             metadata=metadata_obj,
-            components=components_list
+            components=components_list,
+            dependencies=data.get('dependencies', [])
         )
