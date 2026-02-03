@@ -52,6 +52,10 @@ class SBOMIntegrator:
                 parsed_authors = parse_author_string(s_comp.author)
                 authors = [UnifiedAuthor(name=a.get("name"), email=a.get("email")) for a in parsed_authors]
             
+            # Syft의 기존 properties를 가져오고 source_tool 추가
+            syft_properties = [{"name": p.name, "value": p.value} for p in s_comp.properties]
+            syft_properties.append({"name": "source_tool", "value": "Syft"})
+            
             unified_comp = UnifiedComponent(
                 name=s_comp.name,
                 version=s_comp.version,
@@ -60,7 +64,7 @@ class SBOMIntegrator:
                 purl=s_comp.purl,
                 cpe=s_comp.cpe,
                 licenses=[{"license": {"id": l.id, "name": l.name}} for l in s_comp.licenses],
-                properties=[{"name": "source_tool", "value": "Syft"}],
+                properties=syft_properties,
                 authors=authors
             )
             merged_map[key] = unified_comp
@@ -104,13 +108,24 @@ class SBOMIntegrator:
         """
         Hatbom과 Syft의 메타데이터를 통합합니다.
         """
-        # 1. Authors 통합 (Hatbom의 authors 정보 사용)
+        # 1. Authors 통합 (Hatbom + Syft tools의 author 정보)
         unified_authors = []
+        # Hatbom의 authors 추가
         for author_dict in hatbom.metadata.authors:
             unified_authors.append(UnifiedAuthor(
                 name=author_dict.get("name"),
                 email=author_dict.get("email")
             ))
+        # Syft tools.components의 author 정보 추가
+        for tool in syft.metadata.tools:
+            if tool.get("author"):
+                # author 문자열을 파싱하여 추가
+                parsed_authors = parse_author_string(tool.get("author"))
+                for parsed in parsed_authors:
+                    unified_authors.append(UnifiedAuthor(
+                        name=parsed.get("name"),
+                        email=parsed.get("email")
+                    ))
         
         # 2. Tools 통합 (Syft + Hatbom + Quick-BOM-Integrator)
         tools_components = []
