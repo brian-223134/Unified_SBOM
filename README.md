@@ -4,7 +4,7 @@
 ---
 
 # 통합 이후 화면
-<img width="1524" height="914" alt="image" src="https://github.com/user-attachments/assets/ccad0b5a-d7a7-4be3-9102-8ee371e8e2c9" />
+<img width="1534" height="937" alt="image" src="https://github.com/user-attachments/assets/0792026e-db9e-4bb0-b363-1891c40a5e93" />
 
 ---
 
@@ -18,4 +18,5 @@ docker-compose up --build
 
 # 테스트 방법
 - root directory에서 app/test/ directory 내의 test 파일을 직접 불러서 사용
+
 
