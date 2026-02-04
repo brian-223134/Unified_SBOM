@@ -102,7 +102,8 @@ async def process_sboms(
             "summary": summary,
             "components": components_for_template,
             "dependencies": unified_dict.get("dependencies", []),
-            "unified_sbom_json": json.dumps(unified_dict, indent=2, ensure_ascii=False)
+            "unified_sbom_json": json.dumps(unified_dict, indent=2, ensure_ascii=False),
+            "filename": exporter.get_filename()
         })
         
     except Exception as e:
@@ -132,11 +133,12 @@ async def integrate_sboms(
         unified_sbom = integrator.integrate(hatbom_sbom, syft_sbom)
         
         exporter = SBOMExporter(unified_sbom)
+        filename = exporter.get_filename()
         
         return JSONResponse(
             content=exporter.to_dict(),
             headers={
-                "Content-Disposition": "attachment; filename=unified_sbom.json"
+                "Content-Disposition": f"attachment; filename={filename}"
             }
         )
         

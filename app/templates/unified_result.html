@@ -248,7 +248,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'unified_sbom.json';
+            a.download = '{{ filename }}';
             a.click();
             URL.revokeObjectURL(url);
         }

@@ -1,7 +1,7 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:0b9e699f-1d69-45ed-ab30-ee00469364ef",
+  "serialNumber": "urn:uuid:4f235b92-2c8d-4322-9db9-b95475e7fc06",
   "version": 1,
   "metadata": {
     "timestamp": "2026-01-29T05:45:43.073084+00:00",
@@ -9,7 +9,6 @@
       "components": [
         {
           "type": "application",
-          "author": "anchore",
           "name": "syft",
           "version": "1.40.1"
         },
@@ -28,7 +27,7 @@
         "name": "IoTcube - https://iotcube.net"
       },
       {
-        "email": "anchore"
+        "name": "anchore"
       }
     ],
     "component": {
@@ -1510,7 +1509,7 @@
       ],
       "authors": [
         {
-          "email": "Nathan"
+          "name": "Nathan"
         }
       ]
     },
@@ -4643,7 +4642,7 @@
       ],
       "authors": [
         {
-          "email": "Hugging"
+          "name": "Hugging"
         },
         {
           "name": "Inc.",
@@ -7591,8 +7590,7 @@
       ],
       "authors": [
         {
-          "name": "UNKNOWN",
-          "email": "UNKNOWN"
+          "name": "UNKNOWN"
         }
       ]
     },
@@ -7723,7 +7721,7 @@
       ],
       "authors": [
         {
-          "email": "Travis"
+          "name": "Travis"
         }
       ]
     },

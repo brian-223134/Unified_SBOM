@@ -130,6 +130,22 @@ class SBOMExporter:
         """
         return json.dumps(self.to_dict(), indent=indent, ensure_ascii=False)
 
+    def get_filename(self) -> str:
+        """
+        Main Component 이름을 기반으로 파일명을 생성합니다.
+        
+        예: transformers -> transformers_unified_sbom.json
+        
+        Returns:
+            생성된 파일명
+        """
+        metadata = self.unified_sbom.metadata
+        if metadata and metadata.component and metadata.component.name:
+            # 파일명에 사용할 수 없는 문자 제거/치환
+            safe_name = metadata.component.name.replace("/", "_").replace("\\", "_").replace(":", "_")
+            return f"{safe_name}_unified_sbom.json"
+        return "unified_sbom.json"
+
     def save_to_file(self, output_path: str, indent: int = 2) -> str:
         """
         UnifiedSbom 객체를 JSON 파일로 저장합니다.
