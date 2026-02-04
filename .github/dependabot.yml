@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # 1. Python (uv) 패키지 업데이트 설정
+  - package-ecosystem: "pip"
+    directory: "/"
+    # uv.lock 파일과 pyproject.toml을 자동으로 감지하여 업데이트
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    # uv를 사용하는 경우, PR 생성 시 uv lock 명령어를 통해 
+    # lock 파일을 업데이트하도록 구성된 환경에서 잘 작동
+    labels:
+      - "dependencies"
+      - "uv"
+      - "python"
+
+  # 2. GitHub Actions 업데이트
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "ci/cd"
