@@ -27,45 +27,209 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <!-- 주요 통계 카드 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                 <p class="text-sm text-slate-500 mb-1">총 탐지 패키지</p>
                 <p class="text-3xl font-bold text-indigo-600">{{ result.total_packages }} <span class="text-lg text-slate-400 font-normal">개</span></p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                <p class="text-sm text-slate-500 mb-1">분석 도구</p>
-                <p class="text-3xl font-bold text-emerald-600 capitalize">{{ result.tool_name }}</p>
+                <p class="text-sm text-slate-500 mb-1">CI/CD 관련 패키지</p>
+                <p class="text-3xl font-bold text-amber-600">{{ result.cicd_count }} <span class="text-lg text-slate-400 font-normal">개</span></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">고유 라이선스</p>
+                <p class="text-3xl font-bold text-emerald-600">{{ result.unique_licenses }} <span class="text-lg text-slate-400 font-normal">종류</span></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">의존성 관계</p>
+                <p class="text-3xl font-bold text-rose-600">{{ result.total_dependencies }} <span class="text-lg text-slate-400 font-normal">개</span></p>
             </div>
         </div>
 
+        <!-- 도구 및 메타데이터 정보 -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-6 mb-8">
+            <h2 class="text-xl font-semibold text-slate-800 mb-4">📋 분석 정보</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <p class="text-sm text-slate-500">분석 도구</p>
+                    <p class="text-lg font-semibold text-slate-800 capitalize">{{ result.tool_name }}</p>
+                    {% if result.tool_version != "Unknown" %}
+                    <p class="text-sm text-slate-400">v{{ result.tool_version }}</p>
+                    {% endif %}
+                </div>
+                <div>
+                    <p class="text-sm text-slate-500">대상 프로젝트</p>
+                    <p class="text-lg font-semibold text-slate-800">{{ result.target_name }}</p>
+                    <p class="text-sm text-slate-400">{{ result.target_type }}</p>
+                </div>
+                <div>
+                    <p class="text-sm text-slate-500">생성 시간</p>
+                    <p class="text-sm text-slate-600 font-mono">{{ result.timestamp }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 라이선스 통계 -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-6 mb-8">
+            <h2 class="text-xl font-semibold text-slate-800 mb-4">📝 라이선스 통계 (상위 10개)</h2>
+            <div class="space-y-3">
+                {% for license, count in result.license_stats %}
+                <div class="flex justify-between items-center">
+                    <span class="text-slate-700 font-medium">{{ license }}</span>
+                    <div class="flex items-center">
+                        <div class="w-32 bg-slate-200 rounded-full h-2 mr-3">
+                            <div class="bg-indigo-600 h-2 rounded-full" style="width: {{ (count / result.total_packages * 100) | round(1) }}%"></div>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono">{{ count }}개</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 패키지 타입 통계 -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-6 mb-8">
+            <h2 class="text-xl font-semibold text-slate-800 mb-4">📦 패키지 타입별 분포</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {% for pkg_type, count in result.type_stats %}
+                <div class="bg-slate-50 p-4 rounded-lg border">
+                    <div class="flex justify-between items-center">
+                        <span class="text-slate-700 font-medium capitalize">{{ pkg_type }}</span>
+                        <span class="bg-slate-200 px-3 py-1 rounded-full text-sm font-semibold">{{ count }}개</span>
+                    </div>
+                    <div class="mt-2 w-full bg-slate-200 rounded-full h-2">
+                        <div class="bg-emerald-500 h-2 rounded-full" style="width: {{ (count / result.total_packages * 100) | round(1) }}%"></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 보안 및 무결성 정보 -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-6 mb-8">
+            <h2 class="text-xl font-semibold text-slate-800 mb-4">🔒 보안 및 무결성</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-green-600">{{ result.packages_with_hash }}</p>
+                    <p class="text-sm text-slate-500">해시 정보 보유</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-blue-600">{{ result.packages_with_homepage }}</p>
+                    <p class="text-sm text-slate-500">홈페이지 정보 보유</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-purple-600">{{ result.packages_with_vcs }}</p>
+                    <p class="text-sm text-slate-500">VCS 정보 보유</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 의존성 분석 -->
+        {% if result.total_dependencies > 0 %}
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-6 mb-8">
+            <h2 class="text-xl font-semibold text-slate-800 mb-4">🔗 의존성 분석</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-indigo-600">{{ result.dependency_stats.has_dependencies }}</p>
+                    <p class="text-sm text-slate-500">의존성이 있는 패키지</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-slate-600">{{ result.dependency_stats.isolated_packages }}</p>
+                    <p class="text-sm text-slate-500">독립적인 패키지</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-rose-600">{{ result.dependency_stats.max_dependencies }}</p>
+                    <p class="text-sm text-slate-500">최대 의존성 수</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- 패키지 목록 테이블 -->
         <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden">
-            <table class="w-full text-left">
-                <thead class="bg-slate-50 border-b">
-                    <tr>
-                        <th class="px-6 py-4 w-16">#</th>
-                        <th class="px-6 py-4">패키지명</th>
-                        <th class="px-6 py-4">버전</th>
-                        <th class="px-6 py-4">라이선스</th>
-                    </tr>
-                </thead>
-                <tbody id="package-table-body" class="divide-y divide-slate-100">
-                    {% for pkg in result.package_list %}
-                    <tr class="hover:bg-slate-50 transition {% if loop.index > 15 %}hidden-row{% endif %} {% if pkg.is_cicd %}cicd-row{% endif %}">
-                        <td class="px-6 py-4 text-slate-400 text-sm">{{ loop.index }}</td>
-                        <td class="px-6 py-4 font-medium text-slate-800">
-                            {{ pkg.name }}
-                            {% if pkg.is_cicd %}
-                            <span class="ml-2 text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded border border-amber-200 font-bold uppercase tracking-tight">CI/CD</span>
-                            {% endif %}
-                        </td>
-                        <td class="px-6 py-4 text-slate-600 font-mono text-sm">{{ pkg.version }}</td>
-                        <td class="px-6 py-4">
-                            <span class="px-2 py-1 bg-slate-100 text-xs rounded border border-slate-200 text-slate-500">{{ pkg.license }}</span>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+            <div class="p-6 border-b">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-xl font-semibold text-slate-800">📦 패키지 상세 목록</h2>
+                    <div class="flex space-x-4">
+                        <input type="text" id="search-input" placeholder="패키지 검색..." 
+                               class="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                               onkeyup="searchPackages()">
+                        <select id="type-filter" onchange="filterByType()" 
+                                class="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500">
+                            <option value="">모든 타입</option>
+                            {% for pkg_type, count in result.type_stats %}
+                            <option value="{{ pkg_type }}">{{ pkg_type|capitalize }} ({{ count }})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-slate-50 border-b">
+                        <tr>
+                            <th class="px-6 py-4 w-16">#</th>
+                            <th class="px-6 py-4">패키지명</th>
+                            <th class="px-6 py-4">버전</th>
+                            <th class="px-6 py-4">타입</th>
+                            <th class="px-6 py-4">라이선스</th>
+                            <th class="px-6 py-4">보안</th>
+                            <th class="px-6 py-4">참조</th>
+                        </tr>
+                    </thead>
+                    <tbody id="package-table-body" class="divide-y divide-slate-100">
+                        {% for pkg in result.package_list %}
+                        <tr class="hover:bg-slate-50 transition package-row {% if loop.index > 15 %}hidden-row{% endif %} {% if pkg.is_cicd %}cicd-row{% endif %}" 
+                            data-name="{{ pkg.name|lower }}" data-type="{{ pkg.type }}">
+                            <td class="px-6 py-4 text-slate-400 text-sm">{{ loop.index }}</td>
+                            <td class="px-6 py-4 font-medium text-slate-800">
+                                <div class="flex items-center">
+                                    {{ pkg.name }}
+                                    {% if pkg.is_cicd %}
+                                    <span class="ml-2 text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded border border-amber-200 font-bold uppercase tracking-tight">CI/CD</span>
+                                    {% endif %}
+                                </div>
+                                {% if pkg.purl %}
+                                <p class="text-xs text-slate-400 font-mono mt-1">{{ pkg.purl[:50] }}{% if pkg.purl|length > 50 %}...{% endif %}</p>
+                                {% endif %}
+                            </td>
+                            <td class="px-6 py-4 text-slate-600 font-mono text-sm">{{ pkg.version }}</td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded border border-blue-200 capitalize">{{ pkg.type }}</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 bg-slate-100 text-xs rounded border border-slate-200 text-slate-500">{{ pkg.license }}</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex space-x-1">
+                                    {% if pkg.has_hash %}
+                                    <span class="text-green-500" title="해시 정보 {{ pkg.hash_count }}개">🔒</span>
+                                    {% endif %}
+                                    {% if pkg.cpe %}
+                                    <span class="text-blue-500" title="CPE 식별자">🆔</span>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex space-x-1">
+                                    {% if pkg.has_homepage %}
+                                    <span class="text-blue-500" title="홈페이지">🏠</span>
+                                    {% endif %}
+                                    {% if pkg.has_vcs %}
+                                    <span class="text-green-500" title="VCS 저장소">📂</span>
+                                    {% endif %}
+                                    {% if pkg.external_ref_count > 0 %}
+                                    <span class="text-xs text-slate-400">({{ pkg.external_ref_count }})</span>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
 
             {% if result.total_packages > 15 %}
             <div id="view-all-section" class="p-4 bg-slate-50 text-center border-t">
@@ -85,13 +249,75 @@
                 if (isChecked) row.classList.add('cicd-hidden');
                 else row.classList.remove('cicd-hidden');
             });
+            updateRowNumbers();
         }
 
         function showAllAndFilter() {
             document.querySelectorAll('.hidden-row').forEach(row => row.classList.remove('hidden-row'));
             document.getElementById('view-all-section').style.display = 'none';
             filterRows(); // 현재 필터 상태 유지
+            updateRowNumbers();
         }
+
+        function searchPackages() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const rows = document.querySelectorAll('.package-row');
+            
+            rows.forEach(row => {
+                const packageName = row.getAttribute('data-name');
+                if (packageName.includes(searchTerm)) {
+                    row.classList.remove('search-hidden');
+                } else {
+                    row.classList.add('search-hidden');
+                }
+            });
+            updateRowNumbers();
+        }
+
+        function filterByType() {
+            const selectedType = document.getElementById('type-filter').value;
+            const rows = document.querySelectorAll('.package-row');
+            
+            rows.forEach(row => {
+                const packageType = row.getAttribute('data-type');
+                if (!selectedType || packageType === selectedType) {
+                    row.classList.remove('type-hidden');
+                } else {
+                    row.classList.add('type-hidden');
+                }
+            });
+            updateRowNumbers();
+        }
+
+        function updateRowNumbers() {
+            const rows = document.querySelectorAll('.package-row');
+            let visibleIndex = 1;
+            
+            rows.forEach(row => {
+                const isVisible = !row.classList.contains('cicd-hidden') && 
+                                !row.classList.contains('search-hidden') && 
+                                !row.classList.contains('type-hidden') &&
+                                !row.classList.contains('hidden-row');
+                
+                if (isVisible) {
+                    row.style.display = '';
+                    row.querySelector('td').textContent = visibleIndex++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        // 페이지 로드 시 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            // CSS 스타일 추가
+            const style = document.createElement('style');
+            style.textContent = `
+                .search-hidden, .type-hidden { display: none !important; }
+                .package-row { transition: all 0.2s ease; }
+            `;
+            document.head.appendChild(style);
+        });
     </script>
 </body>
 </html>
