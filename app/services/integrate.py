@@ -129,9 +129,11 @@ class SBOMIntegrator:
         
         # 2. Tools 통합 (Syft + Hatbom + Quick-BOM-Integrator)
         tools_components = []
-        # Syft 도구 정보 추가
+        # Syft 도구 정보 추가 (author 필드는 deprecated되어 제외)
         for tool in syft.metadata.tools:
-            tools_components.append(tool)
+            # author 필드를 제외한 새 딕셔너리 생성
+            tool_without_author = {k: v for k, v in tool.items() if k != "author"}
+            tools_components.append(tool_without_author)
         # Hatbom 도구 정보 추가 (있다면)
         tools_components.append({"name": "Hatbom", "version": "1.0.0"})
         # 통합 도구 정보 추가

@@ -77,6 +77,7 @@ def parse_author_string(author_string: str) -> List[Dict[str, Optional[str]]]:
     입력 예시:
     - 단일: "Alex Grönholm <alex.gronholm@nextday.fi>"
     - 여러명: "Filipe Laíns <lains@riseup.net>, Bernát Gábor <gaborjbernat@gmail.com>"
+    - 이름만: "anchore"
     
     반환: [{"name": "이름", "email": "이메일주소"}, ...]
     """
@@ -92,6 +93,13 @@ def parse_author_string(author_string: str) -> List[Dict[str, Optional[str]]]:
         # 이름과 이메일이 모두 비어있으면 건너뜀
         if not name and not email_addr:
             continue
+        
+        # 이메일 주소에 @가 없으면 이름으로 처리 ("anchore" 같은 단순 문자열)
+        if email_addr and '@' not in email_addr:
+            # email_addr에 저장된 값이 실제로는 이름임
+            if not name:
+                name = email_addr
+            email_addr = None
             
         authors.append({
             "name": name if name else None,
