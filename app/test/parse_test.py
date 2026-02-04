@@ -47,12 +47,9 @@ class TestSBOMParser(unittest.TestCase):
             ]
         }
         
-        # 가상 Syft JSON 데이터
+        # 가상 Syft JSON 데이터 (실제 _is_syft 메소드 로직에 맞게)
         self.syft_data = {
-            "schema": {
-                "version": "14.0.0",
-                "url": "https://raw.githubusercontent.com/anchore/syft/main/schema/json/schema-14.0.0.json"
-            },
+            "$schema": "https://raw.githubusercontent.com/CycloneDX/specification/1.6/schema/bom-1.6.schema.json",
             "bomFormat": "CycloneDX",
             "specVersion": "1.6",
             "serialNumber": "urn:uuid:test-syft",
@@ -60,10 +57,13 @@ class TestSBOMParser(unittest.TestCase):
             "metadata": {
                 "timestamp": "2024-01-01T00:00:00Z",
                 "tools": {
-                    "primary": {
-                        "name": "syft",
-                        "version": "0.100.0"
-                    }
+                    "components": [
+                        {
+                            "name": "syft",
+                            "version": "0.100.0",
+                            "type": "application"
+                        }
+                    ]
                 },
                 "component": {
                     "bom-ref": "test-app",
