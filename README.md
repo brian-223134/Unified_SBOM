@@ -20,9 +20,13 @@
 ``` powershell
 docker-compose up --build
 ```
+- 0.0.0.0:8000으로 접속한 이후 localhost:8000으로 주소를 변경하시면 됩니다.
+
+---
 
 # 테스트 방법
 - root directory에서 app/test/ directory 내의 test 파일을 직접 불러서 사용
+
 
 
 
