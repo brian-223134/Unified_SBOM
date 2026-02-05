@@ -1,4 +1,15 @@
-import json
+from datetime import datetime
+from typing import Dict
+from app.models.hatbom_sbom import HatbomSbom
+from app.models.syft_sbom import SyftSbom
+from app.models.unified_sbom import (
+    UnifiedSbom, 
+    UnifiedComponent, 
+    UnifiedAuthor, 
+    UnifiedMetadata, 
+    UnifiedMetadataComponent
+)
+from app.services.parse import parse_author_string
 
 """
 integrate.py
@@ -11,20 +22,6 @@ parse.py에서 파싱된 Hatbom과 Syft 데이터를 통합합니다.
     - 유사도가 일정 기준 이상인 경우 중복으로 간주하고 하나의 데이터로 통합합니다. (주로 name 필드를 기준으로 하며 version까지 같은 경우 동일하다고 판단)
 2. 통합된 데이터를 JSON 형식으로 반환합니다.
 """
-
-import uuid
-from datetime import datetime
-from typing import List, Dict, Any
-from app.models.hatbom_sbom import HatbomSbom
-from app.models.syft_sbom import SyftSbom
-from app.models.unified_sbom import (
-    UnifiedSbom, 
-    UnifiedComponent, 
-    UnifiedAuthor, 
-    UnifiedMetadata, 
-    UnifiedMetadataComponent
-)
-from app.services.parse import parse_author_string
 
 class SBOMIntegrator:
     def __init__(self):
