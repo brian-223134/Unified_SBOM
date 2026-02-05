@@ -5,7 +5,6 @@ from app.models.hatbom_sbom import HatbomSbom
 from app.models.syft_sbom import SyftSbom
 import email.utils
 
-
 """
 parse.py
 해당 파일은 JSON 형식의 데이터를 파싱하는 기능을 제공합니다.

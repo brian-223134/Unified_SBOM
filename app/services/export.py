@@ -14,7 +14,6 @@ export.py
 3. CycloneDX 표준 형식에 맞게 필드명을 변환합니다.
 """
 
-
 class SBOMExporter:
     def __init__(self, unified_sbom: UnifiedSbom):
         self.unified_sbom = unified_sbom
