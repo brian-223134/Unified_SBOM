@@ -81,7 +81,7 @@
                         <div class="w-32 bg-slate-200 rounded-full h-2 mr-3">
                             <div class="bg-indigo-600 h-2 rounded-full" style="width: {{ (count / result.total_packages * 100) | round(1) }}%"></div>
                         </div>
-                        <span class="text-sm text-slate-500 font-mono">{{ count }}개</span>
+                        <span class="text-sm text-slate-500 font-mono w-12 text-right">{{ count }}개</span>
                     </div>
                 </div>
                 {% endfor %}
